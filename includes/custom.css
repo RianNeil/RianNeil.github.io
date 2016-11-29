@@ -1,0 +1,167 @@
+/*=================================================
+===================================================
+	COLORS
+===================================================
+=================================================*/
+
+	.color-highlight-1 {
+		color: #24b288;
+	}
+
+/*=================================================
+===================================================
+	GENERAL
+===================================================
+=================================================*/
+
+	html {
+	    background: none;
+	}
+	
+	body {
+	    background: url(../assets/bg.jpg) !important;
+	    background-size: 100% !important;
+	    background-repeat: no-repeat !important;
+	    background-repeat: repeat-y !important;
+	    background-position: top center;
+	    background-position-y: 0px !important;
+	}
+
+	*{
+		letter-spacing: 1px;
+	}
+	h2 {
+	    font-size: 26px;
+	    font-weight: 400;
+	}
+	h3 {
+	    font-weight: 400;
+	}
+
+	p {
+		font-size: 12px; 
+		font-weight: 100;
+	}
+
+	a.btn.btn-default {
+	    border: 2px solid #24b288;
+	    background: none;
+	    color: #24b288;
+	}
+
+	.blur {
+	    -webkit-filter: blur(3px);
+	    filter: blur(3px);
+
+		transition: .7s filter linear;
+		-webkit-transition: .7s -webkit-filter linear;
+		-moz-transition: .7s -moz-filter linear;
+		-ms-transition: .7s -ms-filter linear;
+		-o-transition: .7s -o-filter linear;	    
+	}
+
+	.blur-no {
+	    -webkit-filter: blur(0);
+	    filter: blur(0);
+	    
+		transition: .5s filter linear;
+		-webkit-transition: .5s -webkit-filter linear;
+		-moz-transition: .5s -moz-filter linear;
+		-ms-transition: .5s -ms-filter linear;
+		-o-transition: .5s -o-filter linear;	    
+	}	
+
+	img.icon-subtract, img.icon-addition {
+		max-width: 20px;
+	    margin-left: -33px;
+	    margin-right: 5px;
+	}
+	
+
+/*=================================================
+===================================================
+	NAVBAR
+===================================================
+=================================================*/
+
+	.navbar-default {
+        background-color: rgba(36,40,41,.95);
+	    border-color: #242829;
+	}
+	.dropdown-menu {
+	    border: none;
+	    box-shadow: 0 10px 6px rgba(0,0,0, 0.5);
+	}
+
+	.navbar-right a {
+	    margin-top: 10px;
+	}
+
+/*=================================================
+===================================================
+	BRANDING
+===================================================
+=================================================*/
+
+	img.logo {
+	    max-width: 45px;
+	    padding-top: 7px;
+	    padding-bottom: 7px;
+	}
+
+/*=================================================
+===================================================
+	HEADER
+===================================================
+=================================================*/
+
+	img.full-width {
+	    width: 100%;
+	}
+
+	.img-src { 
+	    position: absolute;
+	    height: 1000px;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	}
+
+	/*=================================================
+		WHY CHOOSE
+	=================================================*/
+
+	.why-choose p {
+	    opacity: .3;
+	    font-weight: 100;
+	    font-size: 13px;
+	    line-height: 20px;
+	}
+
+
+/*=================================================
+===================================================
+	ABOUT
+===================================================
+=================================================*/
+
+	.about h3.expand-1 {
+	    margin-top: -10px;
+	}
+	.about p {
+	    font-size: 12px;
+	    font-weight: 100;
+	    opacity: .5;
+        margin-top: 35px !important;
+	}	
+
+
+footer p {
+	opacity: .5;
+}
+footer p, footer address {
+    text-align: center;
+    max-width: 450px;
+    margin: 0 auto;
+}
