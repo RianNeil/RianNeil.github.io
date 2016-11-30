@@ -23,18 +23,18 @@ $(function(){
 
 
 
-$(document).ready(function() {
-	var s = $(".header-main");
-	var pos = s.position();		
-	s.addClass("blur-no");			   
-	$(window).scroll(function() {
-		var windowpos = $(window).scrollTop();
-		if (windowpos >= pos.top & windowpos <=100) {
-			s.removeClass("blur");	
-			s.addClass("blur-no");
-		} else {
-			s.removeClass("blur-no");
-			s.addClass("blur");			
-		}
-	});
-});
+// $(document).ready(function() {
+// 	var s = $(".header-main");
+// 	var pos = s.position();		
+// 	s.addClass("blur-no");			   
+// 	$(window).scroll(function() {
+// 		var windowpos = $(window).scrollTop();
+// 		if (windowpos >= pos.top & windowpos <=100) {
+// 			s.removeClass("blur");	
+// 			s.addClass("blur-no");
+// 		} else {
+// 			s.removeClass("blur-no");
+// 			s.addClass("blur");			
+// 		}
+// 	});
+// });

@@ -163,9 +163,28 @@
 ===================================================
 =================================================*/
 
+	#home_carousel {
+	    margin-top: 50px;
+	}
+
 	#home_carousel img {
 	    width: 100%;
 	}
+	.carousel-control.left, .carousel-control.right {
+	    background: none;
+	}	
+	span.glyphicon.glyphicon-chevron-left {
+		background: none;
+	    border-radius: 100%;
+	    font-size: 16px;
+	    padding: 7px;		
+	}
+	span.glyphicon.glyphicon-chevron-right {
+	    background: #24b288;
+	    border-radius: 100%;
+	    font-size: 16px;
+	    padding: 7px;
+	}	
 
 /*=================================================
 ===================================================
