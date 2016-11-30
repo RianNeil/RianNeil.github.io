@@ -40,11 +40,3 @@ $(function(){
 // });
 
 
-
-$(function() {                     // When the page has loaded,
-  $('h3').waypoint(               // create a waypoint
-    function() {
-      alert("Waypoint reached.");
-    }
-  )
-});

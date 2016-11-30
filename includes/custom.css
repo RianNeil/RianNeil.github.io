@@ -1,3 +1,16 @@
+.delay-half {
+	animation-delay: .5s;
+}
+.delay-one {
+	animation-delay: 1s;
+}
+.delay-two {
+	animation-delay: 2s;
+}
+.delay-three {
+	animation-delay: 3s;
+}
+
 /*=================================================
 ===================================================
 	COLORS
