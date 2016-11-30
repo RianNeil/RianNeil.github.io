@@ -42,7 +42,7 @@ $(function(){
 
 
 $(function() {                     // When the page has loaded,
-  $('.expand-1').waypoint(               // create a waypoint
+  $('h3').waypoint(               // create a waypoint
     function() {
       alert("Waypoint reached.");
     }
