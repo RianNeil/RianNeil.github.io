@@ -114,6 +114,17 @@
     <section class="carousel">
         <img class="full-width" src="./assets/carousel.png"> 
         <img class="full-width" src="./assets/globe.png"> 
+
+        <div id="owl-example" class="owl-carousel">
+          <div> Your Content </div>
+          <div> Your Content </div>
+          <div> Your Content </div>
+          <div> Your Content </div>
+          <div> Your Content </div>
+          <div> Your Content </div>
+          <div> Your Content </div>
+          ...
+        </div>        
     </section>    
     
     <footer>
@@ -143,8 +154,15 @@
     <script src="./includes/ie10-viewport-bug-workaround.js"></script>
     <script src="./includes/navbar.js"></script>
 
-<script type="text/javascript">( function(){ window.SIG_EXT = {}; } )()</script></body></html>
+    <script type="text/javascript">( function(){ window.SIG_EXT = {}; } )()</script></body></html>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+       
+            $("#owl-example").owlCarousel();
+       
+        });
+    </script>
 
 
 
