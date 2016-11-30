@@ -172,6 +172,7 @@
 	}
 	.carousel-control.left, .carousel-control.right {
 	    background: none !important;
+	    background-image: none !important;
 	}	
 	span.glyphicon.glyphicon-chevron-left {
 		background: none;
