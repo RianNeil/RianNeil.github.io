@@ -273,26 +273,15 @@
   min-height: 1070px;
   display: block;
   position: fixed;
-  top: 0;
+  top: auto;
   left: 0;
   background-size: 250% auto;
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url('../assets/hero.png');
+  z-index: 10;
 }
-#image {
-  width: 100%;
-  height: auto;
-  min-height: 1070px;
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-size: 250% auto;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-image: url('../assets/hero.png');
-}
+
 h2.banner-text {
     position: absolute;
     top: 45%;
