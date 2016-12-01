@@ -278,7 +278,7 @@
   background-size: 250% auto;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: url('https://raw.githubusercontent.com/RianNeil/RianNeil.github.io/ee45bb506551963ea31456ba0015524b0689bdbd/assets/hero.png');
+  background-image: url('../assets/hero.png');
 }
 h2.banner-text {
     position: absolute;
