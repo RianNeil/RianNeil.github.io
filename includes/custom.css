@@ -281,7 +281,9 @@
   background-image: url('../assets/hero.png');
   z-index: 10;
 }
-
+.hero-2 {
+	display: none; 
+}
 h2.banner-text {
     position: absolute;
     top: 45%;
