@@ -23,6 +23,10 @@ $(function(){
 
 
 
+$(document).ready(function() {
+  var s = skrollr.init();
+})
+
 // $(document).ready(function() {
 // 	var s = $(".header-main");
 // 	var pos = s.position();		
