@@ -48,6 +48,7 @@
 	    background-position: top center;
 	    background-position-y: 0px !important;
 	    height: auto !important;
+        overflow-x: hidden;
 	}
 
 	*{
@@ -100,6 +101,8 @@
 	    margin-right: 5px;
 	}
 	
+
+
 
 /*=================================================
 ===================================================
@@ -306,3 +309,20 @@ h2.banner-text span {
 header {
     margin-top: 1000px;
 } 
+
+
+/*=================================================
+===================================================
+	LIGHTS OUT BLACK OVERLAY
+===================================================
+=================================================*/
+
+  .lights-out {
+      background: black; 
+      position:absolute; 
+      height: 200%; 
+      width: 100%; 
+      z-index: 999 !important;
+      opacity: .5;
+      }
+  }	
