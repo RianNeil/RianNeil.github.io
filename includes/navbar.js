@@ -25,7 +25,12 @@ $(function(){
 
 $(document).ready(function() {
   var s = skrollr.init();
+  if (s.isMobile()) {
+    s.destroy();
+  }  
 })
+
+
 
 // $(document).ready(function() {
 // 	var s = $(".header-main");
