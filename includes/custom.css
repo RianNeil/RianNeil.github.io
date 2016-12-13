@@ -20,6 +20,10 @@
 			animation-delay: 4s;
 		}
 
+		.spacer {
+		    height: 200px;
+		}
+
 /*=================================================
 ===================================================
 	COLORS
@@ -195,10 +199,9 @@
 	    color: #24b288;
 	}
 
-	header {
-	    margin-top: 250px;
-	} 
-
+/*	.header-group {
+	    margin-top: 255px;
+	}*/
 
 	/*=================================================
 		WHY CHOOSE
@@ -311,14 +314,17 @@
 
 
 
-	@media (max-width: 991px){
+	@media (min-width: 768px) and (max-width: 991px){
 		.expand-info {
 		    text-align: center;
 		    margin-top: 30px;
-		}	
+		}
+		header {
+		    margin-top: 0 !important;
+		}		
 	}
 
-	@media (max-width: 767px){
+	@media (min-width:501px) and (max-width: 767px){
 		.why-choose, .global-reach, .expand, .about p {
 		    text-align: center;
 		}	
@@ -329,8 +335,21 @@
 		    width: 87%;
 		    margin: 0 auto;
 		}
+		.hero-mobile {
+			width: 100%;
+		}
+		header {
+		    margin-top: 0;
+		}
+		h2.banner-text {
+		    top: 12%;
+		}			
 	}
 
+	@media (max-width: 500px){
+        font-size: 15px !important;
+        letter-spacing: 0;
+    }
 
 
 
