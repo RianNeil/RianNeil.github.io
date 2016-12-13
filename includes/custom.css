@@ -186,7 +186,7 @@
 	    width: 100%;
 	    color: white;
 	    font-weight: 100;
-	    z-index: 9999;
+	    z-index: 999;
 	    font-size: 30px;
 	    letter-spacing: .25px;
 	    font-weight: 300;
@@ -364,7 +364,10 @@
 		}		
 		.global-reach {
 		    text-align: center;
-		}		
+		}	
+		img.hero-mobile {
+		    padding-top: 60px;
+		}	
     }
 
 
