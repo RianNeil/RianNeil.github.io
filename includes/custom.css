@@ -321,7 +321,7 @@
 		}
 		header {
 		    margin-top: 0 !important;
-		}		
+		}			
 	}
 
 	@media (min-width:501px) and (max-width: 767px){
@@ -352,6 +352,14 @@
     }
 
 
+
+@media (max-width: 991px){
+	.expand-info {
+	    margin: 25px auto !important;
+	    text-align: center !important;
+	    padding: 10px 9% !important;
+	}	
+}
 
 
 
