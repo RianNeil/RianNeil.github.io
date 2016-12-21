@@ -31,6 +31,8 @@
     <script src="./includes/ie-emulation-modes-warning.js"></script>
     <script src="./includes/navbar.js"></script>
 
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -41,6 +43,8 @@
   </head>
 
   <body id="">
+    <div id="bonJoviBackgroundFix" style="background-image: url('./assets/hero-switch-website.png'); display: none; ">
+    </div>
   <div id="skrollr-body" class="wrapper">
 
     <!--Navbar -->
@@ -64,9 +68,152 @@
     </nav>
     <!-- End Navbar -->
 
-    <h2 class="banner-text" data-0="display:block;" data-250="display:none;">
-      <span>merchcast</span> is the only globalized on demand on platform <br class="hidden-xs"> with geo target production and delivery. 
-    </h2>
+      <style>
+          #create, .typing {
+              display: inline-block;
+          }
+          div#create, .typing {
+              /*position: absolute;*/
+          }
+          div#create {
+              margin-left: -110px;
+          }
+          .typing-anchor {
+              display: inline-block;
+              position: absolute;
+          }
+          .typing-anchor {
+              padding-left: 8px;
+          }
+          div#typed_wrap {
+              margin-left: 30px;
+          }
+          .typed-cursor{
+              opacity: 1;
+              -webkit-animation: blink 0.7s infinite;
+              -moz-animation: blink 0.7s infinite;
+              animation: blink 0.7s infinite;
+          }
+          p.merchast-description {
+              font-size: 20px;
+              max-width: 50%;
+              margin: 0 auto;
+          }
+          h1.merchast-titel {
+              font-size: 50px;
+          }
+          h2.merchast-subtitle {
+              font-size: 30px;
+          }
+          div#typed_wrap {
+              margin-top: 30px;
+          }
+          p.merchast-description {
+              font-size: 30px;
+              max-width: 50%;
+              margin: 0 auto;
+              line-height: 38px;
+              margin-top: 20px;
+          }
+          h2.merchast-subtitle {
+              font-size: 50px;
+          }
+          h1.merchast-titel {
+              font-size: 90px;
+              margin-top: -30px;
+          }
+          div#merchast-main-text {
+              margin-top: -150px;
+          }
+          @media(max-width: 1300px){
+              p.merchast-description{
+                    max-width: 60%;
+              }
+          }
+          @media(max-width: 1100px){
+              p.merchast-description{
+                    max-width: 90%;
+              }
+          }
+          @media(max-width: 991px){
+              h2.banner-text {
+                  position: absolute;
+                  top: 0;
+                  background: url(./assets/hero-mobile.jpg);
+                  min-height: 400px; 
+                  padding-top: 210px;
+                  padding-bottom: 40px;
+              }
+              img.hero-mobile.visible-xs.visible-sm.hidden-md.hidden-lg {
+                  display: none !important;
+              }
+              div#merchast-main-text {
+                  position: relative;
+              }
+              h2.banner-text.skrollable.skrollable-between {
+                  padding: 210px 0 60px 0;
+              }
+              header.header-group.skrollable.skrollable-between {
+                  opacity: 1 !important;
+              }
+              h2.banner-text {
+                  display: inline-block !important;
+                  position: initial;
+              }
+              header.header-group {
+                  margin-top: 0 !important;
+                  display: block;
+              }
+          }
+          @media(max-width: 767px){
+              h2.banner-text.skrollable.skrollable-between {
+                  padding-top: 20px;
+              }
+              h2.text-uppercase {
+                  text-align: center;
+              }
+              #typed_wrap {
+                  font-size: 28px !important;
+              }
+              h2.banner-text {
+                  padding: 20px 20px 30px 20px;
+                  padding-top: 30px;
+              }
+              div#merchast-main-text {
+                  margin-top: 50px;
+              }
+              h1.merchast-titel {
+                  font-size: 60px;
+                  margin-top: 0px;
+              }
+              h2.merchast-subtitle {
+                  font-size: 40px;
+              }
+              p.merchast-description {
+                  max-width: 100%;
+                  font-size: 20px;
+                  line-height: 20px;
+                  margin-top: 0;
+                  font-weight: 400;
+                  text-shadow: 1px 1px 3px rgba(0,0,0,1);
+              }
+          }
+
+
+      </style>
+
+      <h2 class="banner-text" data-0="display:block;" data-375="display:none;">
+          <div id="merchast-main-text">
+            <h1 class="merchast-titel">merchast</h1>
+            <h2 class="merchast-subtitle" >What can on demand do for you?</h2>
+            <p class="merchast-description"> merchcast is a robust, scalable platform for shop owners and brands looking for better margins through local production and delivery around the world to their customers via print-on-demand </p>
+            <div id="typed_wrap">
+              <p><div id="create">Create</div> <div class="typing-anchor"><div class="typing"></div></div></p>
+            </div>
+          </div>
+      </h2>
+
+    </div>
 
     <img class="hero-mobile visible-xs visible-sm hidden-md hidden-lg" src="./assets/hero-mobile.jpg">
 
@@ -93,7 +240,7 @@
 
    <div class="spacer hidden-xs hidden-sm visible-md visible-lg">&nbsp</div>
 
-    <header class="header-group" data-0="opacity:0;" data-650="opacity:0;" data-750="visibility:visible; opacity:1;">
+    <header id='header-group' class="header-group" data-0="opacity:0;" data-650="opacity:0;" data-850="visibility:visible; opacity:1;">
         <img class="header header-main full-width waypoint-fade-down" src="./assets/header.png">
           <div class="col-md-offset-2 col-xs-12 col-sm-6 col-md-4 text-right why-choose waypoint-left">
             <h2 class="text-uppercase">Why Choose Us?</h2>
@@ -214,3 +361,60 @@
     <script src="includes/custom-waypoint.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js'></script>
 
+
+    <!-- Typed JS -->
+    <script src="includes/typed.js"></script>
+    <script>
+      //typing animation
+      $( document ).ready(function() {
+            $(".typing").typed({
+                strings: ["Shoes", "Phone cases", "Apparel", "Backpacks", "Headwear", "Home goods", "More."],
+                stringsElement: null,
+                // typing speed
+                typeSpeed: 120,
+                // time before typing starts
+                startDelay: 0,
+                // backspacing speed
+                backSpeed: 0,
+                // shuffle the strings
+                shuffle: false,
+                // time before backspacing
+                backDelay: 500,
+                // loop
+                loop: true,
+                // false = infinite
+                loopCount: false,
+                // show cursor
+                showCursor: true,
+                // character for cursor
+                cursorChar: "|",
+                // attribute to type (null == text)
+                attr: null,
+                // either html or text
+                contentType: 'html',
+                // call when done callback function
+                callback: function() {},
+                // starting callback function before each string
+                preStringTyped: function() {},
+                //callback for every typed string
+                onStringTyped: function( array_pos ) {
+                  // if(array_pos == this.strings.length-1){
+                  //     $('.typed-cursor').hide();
+                  // }
+                },
+                // callback for reset
+                resetCallback: function() {}
+            });
+      });
+      //Height setting as percentage
+      $( window ).scroll(function() {
+          console.log('scroll');
+          if( $(window).width() >= 991 && $(window).width() < 1400 ){
+              var min_width = 991;
+              var diff = $(window).width() - min_width;
+              var amount = Math.floor(100*(.6 - (diff/409)*.2));
+
+              document.getElementById("header-group").style.marginTop = amount.toString()+'% !important';
+          }
+      });
+    </script>
