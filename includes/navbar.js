@@ -21,14 +21,15 @@ $(function(){
 })
 
 
-
-
-$(document).ready(function() {
-  var s = skrollr.init();
-  if (s.isMobile()) {
-    s.destroy();
-  }  
-})
+// Only Initialize skrollr on browsers over 991
+if ($(window).width() > 991) {
+    $(document).ready(function() {
+      var s = skrollr.init();
+      if (s.isMobile()) {
+        s.destroy();
+      }  
+    })
+}
 
 
 
