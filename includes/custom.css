@@ -378,17 +378,151 @@
 		}	
     }
 
+	@media (max-width: 991px){
+		.expand-info {
+		    margin: 25px auto !important;
+		    text-align: center !important;
+		    padding: 10px 9% !important;
+		}	
+	}
 
 
-@media (max-width: 991px){
-	.expand-info {
-	    margin: 25px auto !important;
-	    text-align: center !important;
-	    padding: 10px 9% !important;
-	}	
-}
 
+/*=================================================
+===================================================
+	TYPEDJS/INITIAL TEXT
+===================================================
+=================================================*/
 
+    #create, .typing {
+              display: inline-block;
+          }
+          div#create, .typing {
+              /*position: absolute;*/
+          }
+          div#create {
+              margin-left: -110px;
+          }
+          .typing-anchor {
+              display: inline-block;
+              position: absolute;
+          }
+          .typing-anchor {
+              padding-left: 8px;
+          }
+          div#typed_wrap {
+              margin-left: 30px;
+          }
+          .typed-cursor{
+              opacity: 1;
+              -webkit-animation: blink 0.7s infinite;
+              -moz-animation: blink 0.7s infinite;
+              animation: blink 0.7s infinite;
+          }
+          p.merchast-description {
+              font-size: 20px;
+              max-width: 50%;
+              margin: 0 auto;
+          }
+          h1.merchast-titel {
+              font-size: 50px;
+          }
+          h2.merchast-subtitle {
+              font-size: 30px;
+          }
+          div#typed_wrap {
+              margin-top: 30px;
+          }
+          p.merchast-description {
+              font-size: 30px;
+              max-width: 50%;
+              margin: 0 auto;
+              line-height: 38px;
+              margin-top: 20px;
+          }
+          h2.merchast-subtitle {
+              font-size: 50px;
+          }
+          h1.merchast-titel {
+              font-size: 90px;
+              margin-top: -30px;
+          }
+          div#merchast-main-text {
+              margin-top: -150px;
+          }
+          @media(max-width: 1300px){
+              p.merchast-description{
+                    max-width: 60%;
+              }
+          }
+          @media(max-width: 1100px){
+              p.merchast-description{
+                    max-width: 90%;
+              }
+          }
+          @media(max-width: 991px){
+              h2.banner-text {
+                  position: absolute;
+                  top: 0;
+                  background: url(../assets/hero-mobile.jpg);
+                  min-height: 400px; 
+                  padding-top: 210px;
+                  padding-bottom: 40px;
+              }
+              img.hero-mobile.visible-xs.visible-sm.hidden-md.hidden-lg {
+                  display: none !important;
+              }
+              div#merchast-main-text {
+                  position: relative;
+              }
+              h2.banner-text.skrollable.skrollable-between {
+                  padding: 210px 0 60px 0;
+              }
+              header.header-group.skrollable.skrollable-between {
+                  opacity: 1 !important;
+              }
+              h2.banner-text {
+                  display: inline-block !important;
+                  position: initial;
+              }
+              header.header-group {
+                  margin-top: 0 !important;
+                  display: block;
+              }
+          }
+          @media(max-width: 767px){
+              h2.banner-text.skrollable.skrollable-between {
+                  padding-top: 20px;
+              }
+              h2.text-uppercase {
+                  text-align: center;
+              }
+              #typed_wrap {
+                  font-size: 28px !important;
+              }
+              h2.banner-text {
+                  padding: 20px 20px 30px 20px;
+                  padding-top: 30px;
+              }
+              div#merchast-main-text {
+                  margin-top: 50px;
+              }
+              h1.merchast-titel {
+                  font-size: 60px;
+                  margin-top: 0px;
+              }
+              h2.merchast-subtitle {
+                  font-size: 40px;
+              }
+              p.merchast-description {
+                  max-width: 100%;
+                  font-size: 20px;
+                  line-height: 20px;
+                  margin-top: 0;
+                  font-weight: 400;
+                  text-shadow: 1px 1px 3px rgba(0,0,0,1);
+              }
+          }
 
 
 
