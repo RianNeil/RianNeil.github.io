@@ -69,10 +69,10 @@ $(document).ready(function() {
 
   $( document ).ready(function() {
         $(".typing").typed({
-            strings: ["Shoes", "Phone cases", "Apparel", "Backpacks", "Headwear", "Home goods", "More."],
+            strings: ["Instantly give your customers beautiful products to purchase in literally minutes!", "Upload your art, choose your products, we'll handle the rest.", "Our global distribution network eliminates international shipping.", "Let's get started."],
             stringsElement: null,
             // typing speed
-            typeSpeed: 120,
+            typeSpeed: 40,
             // time before typing starts
             startDelay: 0,
             // backspacing speed
@@ -82,7 +82,7 @@ $(document).ready(function() {
             // time before backspacing
             backDelay: 500,
             // loop
-            loop: true,
+            loop: false,
             // false = infinite
             loopCount: false,
             // show cursor
