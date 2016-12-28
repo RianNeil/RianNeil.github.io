@@ -84,17 +84,20 @@
     <div data-0="opacity:.5; display:block;" data-50="opacity:0; display:none;" class="lights-out hidden-xs hidden-sm visible-md visible-lg">&nbsp;</div>
 
 
-    <div id="image" class="hidden-xs hidden-sm" data-0="display: block; background-size: 450% auto; background-image: url('assets/hero.png'); position: fixed; background-position-y:150px; background-position-y:-1000px; filter: blur(4px); top: 0; opacity:.9; -webkit-transition: background-image .9s ease-in-out; transition: background-image .9s ease-in-out;" data-705="background-image: url('./assets/hero-switch-website.png'); background-size:90%; background-position-y:0px; filter: blur(0); -webkit-transition: background-image .9s ease-in-out; transition: background-image .9s ease-in-out; background-position-y:150px; opacity: 1;" data-900="background-size: 83% auto; background-position-y:150px; opacity: 1;" data-1250="position: relative; background-position-y:-1000px; display:none; display:block;  ">
+    <!-- COMPUTER WITH CROWD -->
+
+    <div id="computer-container">
+	    <div id="image" class="hidden-xs hidden-sm" data-0="display: block; background-size: 450% auto; background-image: url('assets/hero.png'); position: fixed; background-position-y:-1000px; filter: blur(4px); top: 0; opacity:.9; -webkit-transition: background-image .9s ease-in-out; transition: background-image .9s ease-in-out;" data-705="background-image: url('./assets/hero-switch-website.png'); background-size:90%; background-position-y:0px; filter: blur(0); -webkit-transition: background-image .9s ease-in-out; transition: background-image .9s ease-in-out; background-position-y:150px; opacity: 1;" data-900="background-size: 83% auto; background-position-y:150px; opacity: 1;" data-1250="position: relative; background-position-y:-1000px; display:block;  ">
+	    </div>
     </div>
 
  
    <div style="clear:both;">&nbsp;</div>
 
-   <!-- <div class="spacer hidden-xs hidden-sm visible-md visible-lg">&nbsp</div> -->
 
-
+   <!-- WORLD MAP -->
     <header id='header-group' class="header-group" data-0="opacity:0; display:none;" data-1200="opacity:0;" data-1250="display:block; visibility:visible; opacity:1;">
-        <img class="header header-main full-width waypoint-fade-down" src="./assets/header.png">
+        <img class="header header-main world-map full-width waypoint-fade-down" src="./assets/map-animation.gif">
           <div class="col-md-offset-2 col-xs-12 col-sm-6 col-md-4 text-right why-choose waypoint-left">
             <h2 class="text-uppercase">Why Choose Us?</h2>
             <p>
@@ -123,7 +126,8 @@
         </div>
     </header>
 
-    <section class="about" data-0="opacity:0;" data-950="opacity:0;" data-1000="visibility:visible; opacity:1;">
+    <!-- WHY CHOOSE US -->
+    <section class="about" data-0="opacity:0;" data-950="opacity:0;" data-1250="visibility:visible; opacity:0;" data-1350="opacity:1;">
         <img class="full-width waypoint-up about-computer" src="./assets/about-computer.png"> 
 
         <h2 class="text-center about-heading">The Most Distributed Print-On-Demand Platform On The Planet </h2>
@@ -131,7 +135,7 @@
         <div class="col-md-offset-4 col-xs-12 col-sm-12 col-md-6 expand-info">
 
             <h3 class="expand expand-1">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1"><img class="icon icon-subtract waypoint-right delay-one" src="./assets/icon-subtract.png"> Globalized print-on-demand</a>
+              <a class="toggle-dropdown" data-toggle="collapse" data-parent="#accordion" href="#collapse1"><img class="icon icon-subtract waypoint-right delay-one" src="./assets/icon-subtract.png"> Globalized print-on-demand</a>
             </h3>
             <div id="collapse1" class="panel-collapse collapse in">
               <p>
@@ -142,7 +146,8 @@
             </div>
 
             <h3 class="expand expand-2">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><img class="icon icon-addition waypoint-right delay-two" src="./assets/icon-addition.png"> Open API platform for fast 3rd party integrations </a>
+            		<a class="toggle-dropdown" data-toggle="collapse" data-parent="#accordion" href="#collapse2"><img class="icon icon-addition waypoint-right delay-two" src="./assets/icon-addition.png">
+				Open API platform for fast 3rd party integrations </a>
             </h3>
             <div id="collapse2" class="panel-collapse collapse">
               <p>
@@ -151,7 +156,7 @@
             </div>
 
             <h3 class="expand expand-3">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3"><img class="icon icon-addition waypoint-right delay-three" src="./assets/icon-addition.png"> Lowest negotiated printer rates on the market</a>
+              <a class="toggle-dropdown" data-toggle="collapse" data-parent="#accordion" href="#collapse3"><img class="icon icon-addition waypoint-right delay-three" src="./assets/icon-addition.png"> Lowest negotiated printer rates on the market</a>
             </h3>
             <div id="collapse3" class="panel-collapse collapse">
               <p>
@@ -160,7 +165,7 @@
             </div>
 
             <h3 class="expand expand-4">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4"><img class="icon icon-addition waypoint-right delay-three" src="./assets/icon-addition.png"> The biggest music artists in the world use merchcast</a>
+              <a class="toggle-dropdown" data-toggle="collapse" data-parent="#accordion" href="#collapse4"><img class="icon icon-addition waypoint-right delay-three" src="./assets/icon-addition.png"> The biggest music artists in the world use merchcast</a>
             </h3>
             <div id="collapse4" class="panel-collapse collapse">
               <p>
@@ -170,9 +175,6 @@
          
 
         </div>  
-        <div class="col-md-2">
-          &nbsp;
-        </div>           
     </section>
 
 

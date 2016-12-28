@@ -1,6 +1,27 @@
 
 /*=================================================
 ===================================================
+  COLLAPSE ICON SWITCH
+===================================================
+=================================================*/
+  img_closed_src =  './assets/icon-addition.png'
+  img_open_src = './assets/icon-subtract.png'
+
+  $('.toggle-dropdown').click(function(){
+    console.log( $(this).attr('aria-expanded') );
+    var expanded = $(this).attr('aria-expanded');
+    var children  = $(this).children();
+
+    if( expanded == 'true' ){
+      children[0].setAttribute("src", img_closed_src );
+    }else{
+      children[0].setAttribute("src", img_open_src );
+    }
+
+  });
+
+/*=================================================
+===================================================
   NAVBAR
 ===================================================
 =================================================*/

@@ -51,7 +51,6 @@
 	    background-repeat: repeat-y !important;
 	    background-position: top center;
 	    background-position-y: 0px !important;
-	    height: auto !important;
 	    min-height: 2000px;
         overflow-x: hidden;
 	}
@@ -107,7 +106,9 @@
 	}
 	
 
-
+	.tab-wrap {
+	    display: inline-block;
+	}
 
 /*=================================================
 ===================================================
@@ -161,6 +162,14 @@
 	    bottom: 0;
 	    left: 0;
 	    right: 0;
+	}
+
+	div#computer-container {
+	    height: 1250px;
+	}
+
+	.world-map {
+	    padding-top: 150px;
 	}
 
 	#image {
@@ -319,7 +328,7 @@
   .lights-out {
       background: black; 
       position:absolute; 
-      height: 200%; 
+      height: 150%; 
       width: 100%; 
       z-index: 999 !important;
       opacity: .5;
@@ -397,6 +406,12 @@
 		    text-align: center !important;
 		    padding: 10px 9% !important;
 		}	
+		div#computer-container {
+		    display: none;
+		}
+		.world-map {
+		    padding-top: 0;
+		}
 	}
 
 
