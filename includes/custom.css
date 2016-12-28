@@ -233,11 +233,22 @@
 	    margin-top: -10px;
 	}
 	.about p {
-	    font-size: 12px;
+	    font-size: 15px;
 	    font-weight: 100;
 	    opacity: .5;
-        margin-top: 35px !important;
+	    margin-top: 25px !important;
+	    line-height: 27px;
 	}	
+	h2.about-heading {
+	    margin: 50px 0;
+	    font-size: 36px;
+	}	
+	.expand a {
+	    text-decoration: none;
+	}
+	.expand a:hover {
+	    opacity: .7;
+	}		
 
 
 /*=================================================
