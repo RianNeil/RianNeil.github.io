@@ -97,7 +97,18 @@
 
    <!-- WORLD MAP -->
     <header id='header-group' class="header-group" data-0="opacity:0; display:none;" data-1200="opacity:0;" data-1250="display:block; visibility:visible; opacity:1;">
-        <img class="header header-main world-map full-width waypoint-fade-down" src="./assets/map-animation.gif">
+
+          <div id="video" class="header header-main world-map full-width waypoint-fade-down" controls>
+            <div style="max-width: 1200px; display: block; margin: 0 auto;">
+              <video width="100%"  style=""   autoplay>
+                <source src="./assets/map-animated.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+          <!-- <img class="header header-main world-map full-width waypoint-fade-down" src="./assets/map-animation.gif"> -->
+
+
           <div class="col-md-offset-2 col-xs-12 col-sm-6 col-md-4 text-right why-choose waypoint-left">
             <h2 class="text-uppercase">Why Choose Us?</h2>
             <p>
