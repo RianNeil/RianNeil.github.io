@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+ 	<link href="https://fonts.googleapis.com/css?family=Denk+One|Droid+Sans|Droid+Serif|Hind+Guntur|Lakki+Reddy|Lato|Lora|Montserrat|Open+Sans|Oswald|PT+Sans|Raleway|Roboto|Roboto+Condensed|Roboto+Slab|Slabo+27px|Source+Sans+Pro|Taviraj|Ubuntu|Yrsa" rel="stylesheet"> 
+ 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<link href="css/design-tool.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="row">
+		<div class="disign-tool">
+			<div class="tool-status">
+				<div id="status-0" class="status-active"></div>
+				<div id="status-1" class="status-deactive"></div>
+				<div id="status-2" class="status-deactive"></div>
+				<div id="status-3" class="status-deactive"></div>
+				<div id="status-4" class="status-deactive"></div>
+				<div id="status-5" class="status-deactive"></div>
+			</div>
+			<div class="main-tool">
+				<div id="product-area">
+					<button class="btn btn-danger btn-privious"><span class="glyphicon glyphicon-arrow-left"></span>&nbsp;&nbsp;Privious</button>
+					<button class="btn btn-danger btn-next">Next&nbsp;&nbsp;<span class="glyphicon glyphicon-arrow-right"></span></button>
+				</div>
+				<div id="tool-area">
+					<div style="padding:30px;">
+						<div class="color-container display-none">
+							<h3>COLLAR COLOR</h3>
+							<div id="collar-tool">
+							</div>
+							<h3>BACKGROUND COLOR</h3>
+							<div id="background-tool">
+							</div>
+							<h3>JERSEY ACCENT COLOR</h3>
+							<div id="accent-tool">
+							</div>
+							<h3>JERSEY ADDITIONAL COLOR</h3>
+							<div id="additional-tool">
+							</div>
+						</div>
+						<div class="texture-container display-none">
+							<h3>TEXTURE</h3>
+							<div id="texture-tool">
+							</div>
+						</div>
+						<div class="thumbneil-container display-none">
+							<h3>Add text to canvas and drag it</h3>
+							<div class="row">
+								<div class="col-sm-4">
+									<input type="text" class="form-control margin-t-20 btn-156" id="theText">
+								</div>
+								<div class="col-md-4">
+									<select class="form-control margin-t-20 btn-156" id="font-family">
+										<option value="Lato" style="font-family: Lato;">Font Family</option>
+										<option value="Lato" style="font-family: Lato;">Lato</option>
+										<option value="Denk One" style="font-family: Denk One;">Denk One</option>
+										<option value="Droid Sans" style="font-family: Droid Sans;">Droid Sans</option>
+										<option value="Droid Serif" style="font-family: Droid Serif;">Droid Serif</option>
+										<option value="Hind Guntur" style="font-family: Hind Guntur;">Hind Guntur</option>
+										<option value="Lakki Reddy" style="font-family: Lakki Reddy;">Lakki Reddy</option>
+										<option value="Lora" style="font-family: Lora;">Lora</option>
+										<option value="Montserrat" style="font-family: Montserrat;">Montserrat</option>
+										<option value="Open Sans" style="font-family: Open Sans;">Open Sans</option>
+										<option value="Oswald" style="font-family: Oswald;">Oswald</option>
+										<option value="PT Sans" style="font-family: PT+Sans;">PT Sans</option>
+										<option value="Raleway" style="font-family: Raleway;">Raleway</option>
+										<option value="Roboto" style="font-family: Roboto;">Roboto</option>
+										<option value="Roboto Condensed" style="font-family: Roboto Condensed;">Roboto Condensed</option>
+										<option value="Roboto Slab" style="font-family: Roboto Slab;">Roboto Slab</option>
+										<option value="Slabo" style="font-family: Slabo;">Slabo</option>
+										<option value="Source Sans Pro" style="font-family: Source Sans Pro;">Source Sans Pro</option>
+										<option value="Taviraj" style="font-family: Taviraj;">Taviraj</option>
+										<option value="Ubuntu" style="font-family: Ubuntu;">Ubuntu</option>
+										<option value="Yrsa" style="font-family: Yrsa;">Yrsa</option>
+									</select>
+								</div>
+								<div class="col-md-4">
+									<input class="jscolor form-control margin-t-20 btn-156" />
+								</div>
+							</div>
+							<button class="btn btn-danger btn-main-active margin-t-20 btn-156" id="submit">Draw text on canvas</button><br>
+							<div class="fileUpload btn btn-danger btn-main-active margin-t-20 btn-156">
+							    <span>Choose Image</span>
+							    <input type="file" id="image_file" class="upload" />
+							</div>
+							<br>
+							<button id="text_delete" class="btn btn-danger btn-main-deactive margin-t-20 btn-156">Delete</button>
+						</div>
+					</div>
+				</div>
+				<!-- <canvas width="400" height="400" id="cancan" ></canvas> -->
+			</div>
+		</div>
+	</div>
+<script src="js/jscolor/jscolor.js"></script>
+<script src="js/fabric/dist/fabric.min.js"></script>
+<script type="text/javascript">
+
+var img_arr = [];
+var im = [];
+var product_color = [];
+var status_step = 0;
+var status_cnt = 6;
+
+// init;
+init();
+function imageLoaded() {
+	// main canvas
+	$('#product-area').find('.canvas-container').remove();
+	$('#product-area').find('canvas').remove();
+
+	element_canvas = document.createElement("canvas");
+   	for(var i=0;i<7;i++){
+   		var element = element_canvas.cloneNode(true);
+		document.getElementById('product-area').appendChild(element);
+		element.style.cssText = 'position:absolute;top:30px;left:30px';
+
+    	c = element.getContext("2d");
+	    element.width =im[i].width;
+	    element.height =im[i].height;
+	    // read the width and height of the canvas
+	    width = im[i].width;
+	    height = im[i].height;
+	    
+	    // stamp the image on the left of the canvas:
+	    c.drawImage(im[i], 0, 0);
+	    // set color
+	    var collar_rgb = product_color['collar'].replace(/^(rgb|rgba)\(/,'').replace(/\)$/,'').replace(/\s/g,'').split(',');
+	    var background_rgb = product_color['background'].replace(/^(rgb|rgba)\(/,'').replace(/\)$/,'').replace(/\s/g,'').split(',');
+	    var accent_rgb = product_color['accent'].replace(/^(rgb|rgba)\(/,'').replace(/\)$/,'').replace(/\s/g,'').split(',');
+	    var additional_rgb = product_color['additional'].replace(/^(rgb|rgba)\(/,'').replace(/\)$/,'').replace(/\s/g,'').split(',');
+
+	    // current color
+	    var current_color;
+	    change_flag = true;
+	    switch (i) {
+	    	case 0:
+	    		current_color = background_rgb;
+	    		break;
+	    	case 1:
+	    		current_color = accent_rgb;
+	    		break;
+	    	case 2:
+	    		current_color = additional_rgb;
+	    		break;
+	    	case 5:
+	    		current_color = collar_rgb;
+	    		break;
+	    	default:
+	    		change_flag = false;
+	    		break;
+	    }
+	    // get all canvas pixel data
+	    console.log('string'+i)
+	    imageData = c.getImageData(0, 0, width, height);
+
+	    // run through the image, increasing blue, but filtering
+	    // down red and green:
+
+	    for (y = 0; y < height; y++) {
+	        inpos = y * width * 4; // *4 for 4 ints per pixel
+	        outpos = inpos ;
+	        for (x = 0; x < width; x++) {
+	        	if(!change_flag){
+		            r = imageData.data[inpos++]; // less red
+		            g = imageData.data[inpos++]; // less green
+		            b = imageData.data[inpos++]; // MORE BLUE
+		            a = imageData.data[inpos++];     // same alpha
+		        }
+		        else
+		        {
+		        	r = parseInt(current_color[0])+imageData.data[inpos++]*0; // less red
+		            g = parseInt(current_color[1])+imageData.data[inpos++]*0; // less green
+		            b = parseInt(current_color[2])+imageData.data[inpos++]*0; // MORE BLUE
+		            a = imageData.data[inpos++];     // same alpha
+		        }
+
+	            imageData.data[outpos++] = r;
+	            imageData.data[outpos++] = g;
+	            imageData.data[outpos++] = b;
+	            imageData.data[outpos++] = a;
+	        }
+	    }
+
+	    // put pixel data on canvas
+	    c.putImageData(imageData, 0, 0);
+ 	}
+
+ 	//upload-img
+ 	// imgDrag();
+ 	text();
+}
+
+function init()
+{
+	//changeStatus();
+	$('.btn-privious').click(function(){
+		if(status_step == 0)
+		{
+			return;
+		}
+		else {
+			status_step--;
+			changeStatus();
+			reDrow();
+		}
+	});
+	$('.btn-next').click(function(){
+		if(status_step == status_cnt-1)
+		{
+			return;
+		}
+		else {
+			status_step++;
+			changeStatus();
+			reDrow();
+		}
+	});
+	
+}
+function changeStatus()
+{
+	for(var i=0; i < status_cnt; i++)
+	{
+		if($('#status-'+i).hasClass('status-active'))
+		{
+			$('#status-'+i).removeClass('status-active').addClass('status-deactive');
+		}
+	}
+	$('#status-'+status_step).addClass('status-active');
+}
+function reDrow()
+{
+	// piece color
+	var color_arr=['#000000','#ffffff','#9e9f9f','#595a5b','#fbfe00','#ffe400','#c38000','#704a01','#ffa200','#ff6000','#ff0000','#b20000','#640000','#de00ff','#9323a4','#39bbff','#0012ff','#012259','#00ea11','#24ad4e','#006720','#00a6d0','#ff9ce7','#ff53d5','#dc00c0','#fd008f'];
+
+	switch (status_step) {
+		case 0:
+			$('.color-container').css('display','none');
+			$('.texture-container').css('display','none');
+			$('.thumbneil-container').css('display','none');
+			break;
+		case 1:
+			$('.color-container').css('display','block');
+			$('.texture-container').css('display','none');
+			$('.thumbneil-container').css('display','none');
+			// product image
+			img_arr[0]= "img/product/product_1/body0.png";
+			img_arr[1]= "img/product/product_1/sub-body-1.png";
+			img_arr[2]= "img/product/product_1/sub-body-2.png";
+			img_arr[3]= "img/texture/0.png";
+			img_arr[4]= "img/product/product_1/body1.png";
+			img_arr[5]= "img/product/product_1/neck6.png";
+			img_arr[6]= "img/product/product_1/neck4.png";
+			//// collar color
+			$('#collar-tool').empty();
+			a_collar_color = document.createElement("button");
+			for(var i = 0; i < color_arr.length; i++)
+			{
+				var collar = a_collar_color.cloneNode(true);
+				document.getElementById('collar-tool').appendChild(collar);
+				collar.style.cssText = 'background:'+color_arr[i]+';width:30px;height:30px; margin:2px;border:solid 1px black';
+				collar.setAttribute('id','collar_'+i);
+			} 
+			//// background color
+			$('#background-tool').empty();
+			a_background_color = document.createElement("button");
+			for(var i = 0; i <  color_arr.length; i++)
+			{
+				var background = a_background_color.cloneNode(true);
+				document.getElementById('background-tool').appendChild(background);
+				background.style.cssText = 'background:'+color_arr[i]+';width:30px;height:30px; margin:2px;border:solid 1px black;';
+				background.setAttribute('id','background_'+i);
+			} 
+			//// accent color
+			$('#accent-tool').empty();
+			a_accent_color = document.createElement("button");
+			for(var i = 0; i < color_arr.length; i++)
+			{
+				var accent = a_accent_color.cloneNode(true);
+				document.getElementById('accent-tool').appendChild(accent);
+				accent.style.cssText = 'background:'+color_arr[i]+';width:30px;height:30px; margin:2px;border:solid 1px black';
+				accent.setAttribute('id','accent_'+i);
+			} 
+			//// additional color
+			$('#additional-tool').empty();
+			a_additional_color = document.createElement("button");
+			for(var i = 0; i < color_arr.length; i++)
+			{
+				var additional = a_additional_color.cloneNode(true);
+				document.getElementById('additional-tool').appendChild(additional);
+				additional.style.cssText = 'background:'+color_arr[i]+';width:30px;height:30px; margin:2px;border:solid 1px black';
+				additional.setAttribute('id','additional_'+i);
+			} 
+			product_color['collar'] = $('#collar_0').css('background-color');
+			product_color['background'] = $('#background_16').css('background-color');
+			product_color['accent'] = $('#accent_4').css('background-color');
+			product_color['additional'] = $('#additional_0	').css('background-color');
+			for(var i = 0;i < 7; i++)
+			{
+			   	im[i] = new Image();
+			   	im[i].src = img_arr[i];	
+			}
+			// color event
+			for(var i = 0; i < color_arr.length ; i++)
+			{
+				$('#collar_'+i).click(function(){
+					product_color['collar'] = $(this).css('background-color');
+					imageLoaded();
+				});
+				$('#background_'+i).click(function(){
+					product_color['background'] = $(this).css('background-color');
+					imageLoaded();
+				});
+				$('#accent_'+i).click(function(){
+					product_color['accent'] = $(this).css('background-color');
+					imageLoaded();
+				});
+				$('#additional_'+i).click(function(){
+					product_color['additional'] = $(this).css('background-color');
+					imageLoaded();
+				});
+				$('#texture_'+i).click(function(){
+					var bg = $(this).css('background-image');
+					bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
+					im[3].src = bg;
+					console.log(im[3].src);
+					im[3].onload = imageLoaded(); 
+				});
+			}
+			var load_cnt = 0;
+			for(var i = 0; i < img_arr.length;i++ )
+			{
+
+				im[i].onload = function(){
+					load_cnt++;
+					if(load_cnt == img_arr.length){
+						imageLoaded();
+					}
+				}
+			}
+			
+			break;
+		case 2:
+			$('.color-container').css('display','none');
+			$('.texture-container').css('display','block');
+			$('.thumbneil-container').css('display','none');
+
+			//// texture
+			$('.color-container').css('display','none');
+			$('#texture-tool').empty();
+			a_texture_color = document.createElement("button");
+			for(var i = 0; i < 10; i++)
+			{
+				var texture = a_texture_color.cloneNode(true);
+				document.getElementById('texture-tool').appendChild(texture);
+				texture.style.cssText = 'background:url(img/texture/'+i+'.png);background-size:100% 100%;display:inline-block;width:40px;height:40px; margin:5px;border:solid 1px black';
+				texture.setAttribute('id','texture_'+i);
+			} 
+			for(var i = 0; i < color_arr.length ; i++)
+			{
+				$('#texture_'+i).click(function(){
+					var bg = $(this).css('background-image');
+					bg = bg.replace('url(','').replace(')','').replace(/\"/gi, "");
+					im[3].src = bg;
+					console.log(im[3].src);
+					im[3].onload = imageLoaded(); 
+				});
+			}
+			imageLoaded();
+			break;
+		case 3:
+			$('.color-container').css('display','none');
+			$('.texture-container').css('display','none');
+			$('.thumbneil-container').css('display','block');
+			imageLoaded();
+			break;
+		case 4:
+			$('.color-container').css('display','none');
+			$('.texture-container').css('display','none');
+			$('.thumbneil-container').css('display','none');
+			$('.canvas-container').find('canvas').css({'background':'rgba(255,255,255,0)','border':'solid 0px red'});
+		default:
+			// statements_def
+			break;
+	}
+}
+
+function text()
+{
+	if(status_step != 3) return;
+	var boldText = [];
+	element_canvas = document.createElement("canvas");
+	var element = element_canvas.cloneNode(true);
+	document.getElementById('product-area').appendChild(element);
+	element.style.cssText = 'position:absolute;top:140px;left:100px;background:rgba(255,255,255,0.1);border:solid 1px red;width:220px;height:400px;display:block';
+
+	element.setAttribute('id', 'text_drag');
+	var canvas = this.__canvas = new fabric.Canvas('text_drag');
+	canvas.setHeight(400);
+	canvas.setWidth(220);
+  	fabric.Object.prototype.transparentCorners = false;
+  	 
+  	$('.canvas-container').css('{position:absolute}');
+  	console.log($('#text_drag').parent().css({'position':'absolute','top':'140px','left':'100px'}));
+
+  	$('#submit').click(function(){
+  		var st_color = $('.jscolor').val();
+	  	var st_font_family = $('#font-family').val();
+	  	console.log(st_color+" "+st_font_family);
+  		var text_content = $('#theText').val();
+	  	var text= new fabric.Text(text_content, {
+		  	fontWeight: 'bold',
+		  	fontFamily: st_font_family,
+		  	fontSize: 40,
+		  	top:100,
+		  	left:80,
+		  	fontWeight:600,
+		  	shadow: 'rgba(0,0,0,0.3) 5px 5px 5px'
+		});
+		text.setColor('#'+st_color);
+		text.fontSize = 20;
+		canvas.add(text);
+		boldText.push(text);
+  	});
+
+  	$('#image_file').change(function(){
+
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                fabric.Image.fromURL(e.target.result, function(img) {
+				    img.scale(0.2).set({
+				      left: 100,
+				      top: 100,
+				      angle: -15
+				    });
+				    canvas.add(img).setActiveObject(img);
+				    boldText.push(img);
+			 	});
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+  		
+  	});
+  	$('.jscolor').change(function(){
+  		
+  		var st_color = $('.jscolor').val();
+  		for(var i=0; i < boldText.length; i++)
+  		{
+  			if(boldText[i].active)
+  			{
+  				if(boldText[i].fill.substr(0,1) == '#')
+  				{
+  					boldText[i].fill = '#'+st_color;
+  					canvas.renderAll();
+  				}
+  			}
+  		}
+  	});
+  	$('#font-family').change(function(){
+  		var st_font_family = $('#font-family').val();
+  		var st_color = $('.jscolor').val();
+  		for(var i=0; i < boldText.length; i++)
+  		{
+  			if(boldText[i].active)
+  			{
+  				if(boldText[i].fill.substr(0,1) == '#')
+  				{
+  					boldText[i].fontFamily = st_font_family;
+  					canvas.renderAll();
+  				}
+  			}
+  		}
+  	});
+  	$('#text_delete').click(function(){
+  		var temp = [];
+  		for(var i=0; i < boldText.length; i++)
+  		{
+  			if(boldText[i].active)
+  			{
+  				boldText[i].remove();
+  				
+  				for(var j=0;j<boldText.length;j++)
+  				{
+  					if(j!=i)
+  					{
+  						temp.push(boldText[j]);
+  					}
+  				}
+  				break;
+  			}
+  		}
+  		boldText = temp;
+  	});
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+function imgDrag()
+{
+	element_canvas = document.createElement("canvas");
+	var element = element_canvas.cloneNode(true);
+	document.getElementById('product-area').appendChild(element);
+	element.style.cssText = 'position:absolute;top:140px;left:100px;background:rgba(255,255,255,0.1);border:solid 1px red;width:220px;height:400px;';
+	element.setAttribute('id', 'img_drag');
+	var canvas = this.__canvas = new fabric.Canvas('img_drag');
+	canvas.setHeight(400);
+	canvas.setWidth(220);
+  	fabric.Object.prototype.transparentCorners = false;
+
+  	fabric.Image.fromURL('img/thumbneils/penguin.png', function(img) {
+	    img.scale(0.2).set({
+	      left: 100,
+	      top: 100,
+	      angle: -15
+	    });
+	    canvas.add(img).setActiveObject(img);
+ 	});
+  	
+  	$('.canvas-container').css('{position:absolute}');
+  	console.log($('#img_drag').parent().css({'position':'absolute','top':'140px','left':'100px'}));
+}
+function imgDrag_1()
+{
+	element_canvas = document.createElement("canvas");
+	var element = element_canvas.cloneNode(true);
+	document.getElementById('product-area').appendChild(element);
+	element.style.cssText = 'position:absolute;top:140px;left:100px;background:rgba(255,255,255,0.1);border:solid 1px red;width:220px;height:400px;';
+	element.setAttribute('id', 'image_drag');
+	// c = element.getContext("2d");
+	// c.drawImage(im[2], 0, 0);
+
+	var canvas=document.getElementById("image_drag");
+    var ctx=canvas.getContext("2d");
+    canvas.width = 220;
+    canvas.height = 400;
+
+	var canvasOffset=$("#image_drag").offset();
+	console.log(canvasOffset);
+    var offsetX=canvasOffset.left;
+    var offsetY=canvasOffset.top;
+
+    var startX;
+    var startY;
+    var isDown=false;
+
+
+    var pi2=Math.PI*2;
+    var resizerRadius=10;
+    var rr=resizerRadius*resizerRadius;
+    var draggingResizer={x:0,y:0};
+    var imageX=0;
+    var imageY=0;
+    var imageWidth,imageHeight,imageRight,imageBottom;
+    var draggingImage=false;
+    var startX;
+    var startY;
+    var img=new Image();
+    img.onload=function(){
+        imageWidth=100;
+        imageHeight=100;
+        imageRight=imageX+imageWidth;
+        imageBottom=imageY+imageHeight;
+        draw(true,false);
+    }
+    img.src="img/thumbneils/penguin.png";
+
+
+    function draw(withAnchors,withBorders){
+
+        // clear the canvas
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+
+        // draw the image
+        ctx.drawImage(img,0,0,img.width,img.height,imageX,imageY,imageWidth,imageHeight);
+
+        // optionally draw the draggable anchors
+        if(withAnchors){
+            drawDragAnchor(imageX,imageY);
+            drawDragAnchor(imageRight,imageY);
+            drawDragAnchor(imageRight,imageBottom);
+            drawDragAnchor(imageX,imageBottom);
+        }
+        // optionally draw the connecting anchor lines
+        if(withBorders){
+            ctx.beginPath();
+            ctx.moveTo(imageX,imageY);
+            ctx.lineTo(imageRight,imageY);
+            ctx.lineTo(imageRight,imageBottom);
+            ctx.lineTo(imageX,imageBottom);
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+    }
+
+    function drawDragAnchor(x,y){
+        ctx.beginPath();
+        console.log(x+"+"+y);
+        ctx.arc(x,y,resizerRadius,0,pi2,false);
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    function anchorHitTest(x,y){
+        var dx,dy;
+
+        // top-left
+        dx=x-imageX;
+        dy=y-imageY;
+        if(dx*dx+dy*dy<=rr){ return(0); }
+        // top-right
+        dx=x-imageRight;
+        dy=y-imageY;
+        if(dx*dx+dy*dy<=rr){ return(1); }
+        // bottom-right
+        dx=x-imageRight;
+        dy=y-imageBottom;
+        if(dx*dx+dy*dy<=rr){ return(2); }
+        // bottom-left
+        dx=x-imageX;
+        dy=y-imageBottom;
+        if(dx*dx+dy*dy<=rr){ return(3); }
+        return(-1);
+
+    }
+
+
+    function hitImage(x,y){
+        return(x>imageX && x<imageX+imageWidth && y>imageY && y<imageY+imageHeight);
+    }
+
+
+    function handleMouseDown(e){
+      startX=parseInt(e.clientX-offsetX);
+      startY=parseInt(e.clientY-offsetY);
+      console.log(startX+"+"+startY);
+      draggingResizer=anchorHitTest(startX,startY);
+
+      console.log(draggingResizer);
+      draggingImage= draggingResizer<0 && hitImage(startX,startY);
+    }
+
+    function handleMouseUp(e){
+      draggingResizer=-1;
+      draggingImage=false;
+      draw(true,false);
+    }
+
+    function handleMouseLeave(e){
+		draggingResizer=-1;
+      	draggingImage=false;
+      	draw(false,false);
+      	
+    }
+
+    function handleMouseEnter(e){
+		draggingResizer=-1;
+      	draggingImage=false;
+      	draw(true,false);
+      	
+    }
+    function handleMouseMove(e){
+
+      if(draggingResizer>-1){
+
+          mouseX=parseInt(e.clientX-offsetX);
+          mouseY=parseInt(e.clientY-offsetY);
+
+          // resize the image
+          switch(draggingResizer){
+              case 0: //top-left
+                  imageX=mouseX;
+                  imageWidth=imageRight-mouseX;
+                  imageY=mouseY;
+                  imageHeight=imageBottom-mouseY;
+                  break;
+              case 1: //top-right
+                  imageY=mouseY;
+                  imageWidth=mouseX-imageX;
+                  imageHeight=imageBottom-mouseY;
+                  break;
+              case 2: //bottom-right
+                  imageWidth=mouseX-imageX;
+                  imageHeight=mouseY-imageY;
+                  break;
+              case 3: //bottom-left
+                  imageX=mouseX;
+                  imageWidth=imageRight-mouseX;
+                  imageHeight=mouseY-imageY;
+                  break;
+          }
+
+          // enforce minimum dimensions of 25x25
+          if(imageWidth<25){imageWidth=25;}
+          if(imageHeight<25){imageHeight=25;}
+
+          // set the image right and bottom
+          imageRight=imageX+imageWidth;
+          imageBottom=imageY+imageHeight;
+
+          // redraw the image with resizing anchors
+          draw(true,true);
+
+      }else if(draggingImage){
+
+          imageClick=false;
+
+          mouseX=parseInt(e.clientX-offsetX);
+          mouseY=parseInt(e.clientY-offsetY);
+
+          // move the image by the amount of the latest drag
+          var dx=mouseX-startX;
+          var dy=mouseY-startY;
+          imageX+=dx;
+          imageY+=dy;
+          imageRight+=dx;
+          imageBottom+=dy;
+          // reset the startXY for next time
+          startX=mouseX;
+          startY=mouseY;
+
+          // redraw the image with border
+          draw(false,true);
+
+      }
+    }
+    $("#image_drag").mousedown(function(e){handleMouseDown(e);});
+    $("#image_drag").mousemove(function(e){handleMouseMove(e);});
+    $("#image_drag").mouseup(function(e){handleMouseUp(e);});
+    $("#image_drag").mouseleave(function(e){handleMouseLeave(e);});
+    $("#image_drag").mouseenter(function(e){handleMouseEnter(e);});
+}
+function text_2()
+{
+	element_canvas = document.createElement("canvas");
+	var element = element_canvas.cloneNode(true);
+	document.getElementById('product-area').appendChild(element);
+	element.style.cssText = 'position:absolute;top:140px;left:100px;background:rgba(255,255,255,0.1);border:solid 1px red;width:220px;height:400px;';
+	element.setAttribute('id', 'text_drag');
+	// variables used to get mouse position on the canvas
+	var canvas = document.getElementById("text_drag");
+	var ctx = canvas.getContext("2d");
+	canvas.width = 220;
+    canvas.height = 400;
+	var $canvas = $("#text_drag");
+	var canvasOffset = $canvas.offset();
+	var offsetX = canvasOffset.left;
+	var offsetY = canvasOffset.top;
+	var scrollX = $canvas.scrollLeft();
+	var scrollY = $canvas.scrollTop();
+
+	// variables to save last mouse position
+	// used to see how far the user dragged the mouse
+	// and then move the text by that distance
+	var startX;
+	var startY;
+
+	// an array to hold text objects
+	var texts = [];
+
+	// this var will hold the index of the hit-selected text
+	var selectedText = -1;
+
+	// clear the canvas & redraw all texts
+	function draw() {
+		var textMeasure;
+	    ctx.clearRect(0, 0, canvas.width, canvas.height);
+	    for (var i = 0; i < texts.length; i++) {
+	        var text = texts[i];
+	        ctx.rotate(0 * Math.PI / 180);
+	        ctx.fillText(text.text, text.x, text.y);
+	        ctx.save();
+	        var rotation = 0;
+			var font  = "Lato";
+			var fontSize = 36;
+			var  fontWeight = 400;
+			var textColor = '#000000';
+	        ctx.font = fontWeight + " " + fontSize + "px " + font;
+	 		ctx.fillStyle = textColor;
+	 		ctx.rotate(rotation * Math.PI / 180);
+	 		textMeasure = ctx.measureText(text.text);
+	        ctx.fillText(text.text, text.x, text.y);
+	        ctx.restore();
+
+	        ctx.beginPath();
+	        ctx.moveTo(text.x,text.y);
+	        ctx.lineTo(text.x,text.y-fontSize);
+	        ctx.lineTo(text.x+textMeasure.width,text.y-fontSize);
+	        ctx.lineTo(text.x+textMeasure.width,text.y);
+	        ctx.closePath();
+	        ctx.stroke();
+	    }
+	}
+	// test if x,y is inside the bounding box of texts[textIndex]
+	function textHittest(x, y, textIndex) {
+	    var text = texts[textIndex];
+	    return (x >= text.x && x <= text.x + text.width && y >= text.y - text.height && y <= text.y);
+	}
+
+	// handle mousedown events
+	// iterate through texts[] and see if the user
+	// mousedown'ed on one of them
+	// If yes, set the selectedText to the index of that text
+	function handleMouseDown(e) {
+	    e.preventDefault();
+	    startX = parseInt(e.clientX - offsetX);
+	    startY = parseInt(e.clientY - offsetY);
+	    // Put your mousedown stuff here
+	    for (var i = 0; i < texts.length; i++) {
+	        if (textHittest(startX, startY, i)) {
+	            selectedText = i;
+	        }
+	    }
+	    console.log(selectedText);
+	}
+
+	// done dragging
+	function handleMouseUp(e) {
+	    e.preventDefault();
+	    selectedText = -1;
+	}
+
+	// also done dragging
+	function handleMouseOut(e) {
+	    e.preventDefault();
+	    selectedText = -1;
+	}
+
+	// handle mousemove events
+	// calc how far the mouse has been dragged since
+	// the last mousemove event and move the selected text
+	// by that distance
+	function handleMouseMove(e) {
+	    if (selectedText < 0) {
+	        return;
+	    }
+	    e.preventDefault();
+	    mouseX = parseInt(e.clientX - offsetX);
+	    mouseY = parseInt(e.clientY - offsetY);
+
+	    // Put your mousemove stuff here
+	    var dx = mouseX - startX;
+	    var dy = mouseY - startY;
+	    startX = mouseX;
+	    startY = mouseY;
+
+	    var text = texts[selectedText];
+	    text.x += dx;
+	    text.y += dy;
+	    draw();
+	}
+
+	// listen for mouse events
+	$("#text_drag").mousedown(function (e) {
+	    handleMouseDown(e);
+	});
+	$("#text_drag").mousemove(function (e) {
+	    handleMouseMove(e);
+	});
+	$("#text_drag").mouseup(function (e) {
+	    handleMouseUp(e);
+	});
+	$("#text_drag").mouseout(function (e) {
+	    handleMouseOut(e);
+	});
+
+	$("#submit").click(function () {
+
+	    // calc the y coordinate for this text on the canvas
+	    var y = texts.length * 20 + 300;
+
+	    // get the text from the input element
+	    var text = {
+	        text: $("#theText").val(),
+	        x: 20,
+	        y: y
+	    };
+
+	    // calc the size of this text for hit-testing purposes
+	    ctx.font = "16px verdana";
+	    text.width = ctx.measureText(text.text).width;
+	    text.height = 16;
+
+	    // put this new text in the texts array
+	    texts.push(text);
+
+	    // redraw everything
+	    draw();
+
+	});
+
+}
+function text_1()
+{
+	mx = 200;
+	my = 200;
+
+	var idx = 0;
+	var inputText = $('<div class="draggable" id="draggable' + idx + '" style="position: absolute; left: ' + mx + 'px; top: ' + my + 'px;"><input style="background:transparent" rows="1" type="text" class="inputText" id="inputText' + idx + '" placeholder="Input your text here" spellcheck="false"></input></div>');
+	inputText.appendTo('body');
+
+	var fstyle = $('<div class="font" id="font' + idx + '"><select class="font-family"><option value="Lato" style="font-family: Lato;">Lato</option><option value="Denk One" style="font-family: Denk One;">Denk One</option><option value="Droid Sans" style="font-family: Droid Sans;">Droid Sans</option><option value="Droid Serif" style="font-family: Droid Serif;">Droid Serif</option><option value="Hind Guntur" style="font-family: Hind Guntur;">Hind Guntur</option><option value="Lakki Reddy" style="font-family: Lakki Reddy;">Lakki Reddy</option><option value="Lora" style="font-family: Lora;">Lora</option><option value="Montserrat" style="font-family: Montserrat;">Montserrat</option><option value="Open Sans" style="font-family: Open Sans;">Open Sans</option><option value="Oswald" style="font-family: Oswald;">Oswald</option><option value="PT Sans" style="font-family: PT+Sans;">PT Sans</option><option value="Raleway" style="font-family: Raleway;">Raleway</option><option value="Roboto" style="font-family: Roboto;">Roboto</option><option value="Roboto Condensed" style="font-family: Roboto Condensed;">Roboto Condensed</option><option value="Roboto Slab" style="font-family: Roboto Slab;">Roboto Slab</option><option value="Slabo" style="font-family: Slabo;">Slabo</option><option value="Source Sans Pro" style="font-family: Source Sans Pro;">Source Sans Pro</option><option value="Taviraj" style="font-family: Taviraj;">Taviraj</option><option value="Ubuntu" style="font-family: Ubuntu;">Ubuntu</option><option value="Yrsa" style="font-family: Yrsa;">Yrsa</option></select><select class="font-size"><option value="10">10</option><option value="12">12</option><option value="14">14</option><option value="16">16</option><option value="18">18</option><option value="20">20</option><option value="22">22</option><option value="24">24</option><option value="26">26</option><option value="28">28</option><option value="30">30</option><option value="32">32</option><option value="34">34</option><option value="36">36</option><option value="40">40</option><option value="44">44</option><option value="48">48</option><option value="54">54</option><option value="72">72</option></select><select class="font-weight"><option value="100">100</option><option value="200">200</option><option value="300">300</option><option value="400">400</option><option value="500">500</option><option value="600">600</option><option value="700">700</option><option value="800">800</option><option value="900">900</option></select></div>');
+	fstyle.appendTo("#draggable" + idx);
+
+	$("#font" + idx).children(".font-size").val('32');
+	$("#font" + idx).children(".font-weight").val('400');
+
+	var input = document.createElement('INPUT');
+    input.className = "font-color";
+    var picker = new jscolor(input);
+    picker.fromHSV(0, 0, 0);	    
+    document.getElementById('font' + idx).appendChild(input);
+
+	$(".font-family").change(function() {
+		var idx = $(this).parent().attr('id').substr(4);
+		$("#inputText" + idx).css("font-family", $(this).val());
+		$("#inputText" + idx).focus();
+	});
+
+	$(".font-size").change(function() {
+		var idx = $(this).parent().attr('id').substr(4);
+		$("#inputText" + idx).css("font-size", $(this).val() + 'px');
+		$("#inputText" + idx).focus();
+	});
+
+	$(".font-color").change(function() {
+		var idx = $(this).parent().attr('id').substr(4);
+		$("#inputText" + idx).css("color", "#" + $(this).val());
+		$("#inputText" + idx).focus();
+	});
+
+	$(".font-weight").change(function() {
+		var idx = $(this).parent().attr('id').substr(4);
+		$("#inputText" + idx).css("font-weight", $(this).val());
+		$("#inputText" + idx).focus();
+	});
++
+	$(".inputText").focusin(function() {
+		removeSettings();
+		$(this).css('border', '2px solid #4C9ED9');
+		$("#font" + $(this).attr('id').substr(9)).css('display', 'block');
+	});
+
+	$("#inputText" + idx).focus();
+	$(".draggable").draggable();			
+	add_text = 0;
+	$("#canvas").css('cursor', 'crosshair');		
+}
+$(window).on('load',function(){
+	 
+});
+
+ // code assumes this image is 200x200
+
+</script>
+</body>
+</html>

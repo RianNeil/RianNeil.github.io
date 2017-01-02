@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user Billng Management</title>
+	<meta name="charset" content="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/jqueryui/jquery-ui.min.css">
+
+	<!-- select effect -->
+	<link rel="stylesheet" type="text/css" href="css/select-effect/cs-select.css">
+	<link rel="stylesheet" type="text/css" href="css/select-effect/cs-skin-elastic.css">
+	<!-- user page -->
+	<link rel="stylesheet" type="text/css" href="css/userPage.css">
+	<link rel="stylesheet" type="text/css" href="css/userBillingManagement.css">
+</head>
+<body>
+	 
+	<div class="user-back">
+
+		<div class="row">
+			<div class="home-logo">
+		      <a href="index.html">
+		      	<img src="img/logo.png">
+		      </a>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-3 left-sider-bar">
+				<div class="row">
+					<div class="col-xs-12">
+						<button type="button" class="navbar-toggle collapsed display-block" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+				      	</button>
+			      	</div>
+		      	</div>
+		      	<div class="row">
+			      	<ul id="bs-example-navbar-collapse-1"  class="collapse ">
+						<li><a href="userAdmin.html">Home</a></li>
+						<li class="send-a-package">Send&nbsp;a&nbsp;Package
+							<ul class="sub-menu">
+								<li href=""><a href="userSingleLabel.html"><span class="glyphicon glyphicon-ok">&nbsp;&nbsp;</span>Single Label</a></li>
+								<li><a href="userBulkLabel.html"><span class="glyphicon glyphicon-ok">&nbsp;&nbsp;Bulk Labels</a></li>
+							</ul>
+						</li>
+						<li class="active"><a href="userBillingManagement.html">Billing</a></li>
+						<li><a href="userToCart.html">To&nbsp;Cart</a></li>
+						<li><a href="userContactUs.html">Contact&nbsp;Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row user-main-body">
+			<div class="col-md-3">
+				<div class="status-container text-center mobile-active">
+					<div class="row status-header">
+						<h3 class="h-active">BILLING MANAGEMENT</h3>
+					</div>
+					<div class="row status-body">
+						<div class="">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="menu-item-div">
+										<a data-target="%one-time-recharge" data-toggle="modal">One-Time Charge</a>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="menu-item-div">
+										<a>Auto Recharge</a>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="menu-item-div">
+										<a>Remove Card</a>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="menu-item-div">
+										<a class="btn-payment-history">Payment History</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div  class="col-md-9 col-xs-12">
+				<div class="view-container">
+					<div class="col-md-12 payment-info">
+						<div class="row text-center">
+							<div class="col-md-12">
+								<h2 class="account-label">ACCOUNT BALANCE</h2>
+							</div>
+						</div>
+						<div class="row text-center">
+							<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+								<div class="balance"><h1>$25.00</h1></div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 payment">
+								<div class="row payment-header">
+									<div class="col-md-5 col-sm-5">
+										<h3 class="" >Credit&nbsp;Card</h3>
+									</div>
+									<div class="col-md-7 col-sm-7 test-right">                          
+										<img class="img-responsive" src="http://i76.imgup.net/accepted_c22e0.png">
+									</div>
+								</div>
+								<div class="row payment-body">
+									<div class="col-sm-6">
+										<h2>Summary</h2>
+										<p>You can recharge your account, see your balance, your purchase history and apply for refunds</p>
+									</div>
+									<div class="col-sm-6">
+										<h3>Ending in 6005</h3>
+										<h3>Expires on  9/2020</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="view-container payment-history">
+							<div class="view-status">
+								<h3 class="history-title">Payment History</h3>
+							</div>
+							<div class="view-header">
+								<div class="row text-center">
+									<div class="col-xs-6 col-md-2">
+										<h4 class="h-name"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Date</h4>
+									</div>
+									<div class="col-xs-3 col-md-2">
+										<h4 class="h-name"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Amount</h4>
+									</div>
+									<div class="col-md-2 col-xs-3 ">
+										<h4 class="h-address1"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Type</h4>
+									</div>
+									<div class="col-md-2 mobile-active">
+										<h4 class="h-postalcode"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Last Four</h4>
+									</div>
+									<div class="col-md-2 mobile-active">
+										<h4 class="h-postalcode"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Status</h4>
+									</div>
+									<div class="col-md-2 mobile-active">
+										<h4 class="h-postalcode"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Receipt</h4>
+									</div>
+								</div>
+							</div>
+							<div class="view-body">
+								<div class="view-item-demo display-none">
+									<div class="row text-center">
+										<div class="col-md-2 col-xs-6">
+											<h4 id="name">2016-07-04 00:00:00</h4>
+										</div>
+										<div class="col-md-2  col-xs-3">
+											<h4 id="address1">$10</h4>
+										</div>
+										<div class="col-md-2  col-xs-3">
+											<h4 id="postalcode" >Credit</h4>
+										</div>
+										<div class="col-md-2  mobile-active">
+											<h4 id="postalcode" >6005</h4>
+										</div>
+										<div class="col-md-2  mobile-active">
+											<h4 id="postalcode" >succeeded</h4>
+										</div>
+										<div class="col-md-2  mobile-active">
+											<h4 id="postalcode" ></h4>
+										</div>
+									</div>
+								</div>
+								<div class="view-item-slider-demo display-none">
+									<div class="row mobile-deactive black-bottom-separate text-center" >
+										<div class="col-xs-4">
+											<h4 id="address1" >6005</h4>
+										</div>
+										<div class="col-xs-4">
+											<h4 id="city">succeeded</h4>
+											
+										</div>
+										<div class="col-xs-4">
+											<h4 id="postalcode" ></h4>
+										</div>
+									</div>
+									<div class="row">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- The Modal -->
+	<div id="one-time-recharge" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="close">X</span>
+	      <h2>One Time Recharge</h2>
+	    </div>
+	    <div class="modal-body text-center">
+	    	<div class="row">
+	    		<div class="col-md-8 col-md-offset-2">
+			    	<div class="input-group">
+			    		<span class="input-group-addon input-type-icon-1"><span>$</span></span>
+						<input class="form-control input-type-1" name="recharge" placeholder="Select an amount" required="" autofocus="" type="tel">
+					</div>	
+				</div>
+			</div>
+	    </div>
+	    <div class="modal-footer">
+	      	<button type="button" class="btn-close btn-main-1" data-dismiss="modal">Close</button>
+            <button type="button" class="btn-main-2">Upload</button>
+	    </div>
+	  </div>
+	</div>
+	<script src="assets/jquery/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/jqueryui/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- select option -->
+	<script src="js/select-effect/classie.js"></script>
+	<script src="js/select-effect/selectFx.js"></script>
+	<!--quote page main js -->
+	<script src="js/left-menu.js"></script>
+	<script src="js/userPage.js"></script>
+	<script src="js/userBillingManagement.js"></script>
+</body>	
+</html>

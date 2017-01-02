@@ -1,0 +1,125 @@
+/* Example tokeninput style #1: Token vertical list*/
+ul.token-input-list {
+   /* overflow: hidden; 
+    height: auto !important; 
+    height: 1%;
+    width: 400px;
+    border: 1px solid #999;
+    cursor: text;
+    font-size: 12px;
+    font-family: Verdana;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    list-style-type: none;
+    clear: left;*/
+    padding: 30px 20px;
+    font-size: 20px;
+    color: #fff;
+    width: 200px !important;
+    font-weight: 900;
+    border-radius: 30px;
+    height: 40px;
+    background: #ae1570;
+}
+
+ul.token-input-list li {
+    list-style-type: none;
+    margin-top: -30px;
+    margin-left: -5px;
+}
+
+ul.token-input-list li input {
+    border: 0;
+    width: 350px;
+    padding: 3px 8px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: transparent;
+    -webkit-appearance: caret;
+}
+
+li.token-input-token {
+    overflow: hidden; 
+    height: auto !important; 
+    height: 1%;
+    margin: 3px;
+    padding: 3px 5px;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    cursor: default;
+    display: block;
+}
+
+li.token-input-token p {
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+
+li.token-input-token span {
+    float: right;
+    color: #777;
+    cursor: pointer;
+}
+
+li.token-input-selected-token {
+    background-color: transparent;
+    color: #fff;
+}
+
+li.token-input-selected-token span {
+    color: transparent;
+}
+
+div.token-input-dropdown {
+    position: relative;
+    width: 150px;
+    margin-left: 24px;
+    background-color: rgba(255,22,113,0.5);
+    overflow: hidden;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    cursor: default;
+    font-size: 12px;
+    font-family: Verdana;
+    z-index: 1000;
+}
+
+div.token-input-dropdown p {
+    margin: 0;
+    padding: 5px;
+    color: white;
+}
+
+div.token-input-dropdown ul {
+    margin: 0;
+    padding: 0;
+}
+
+div.token-input-dropdown ul li {
+    background-color: #fff;
+    padding: 3px;
+    list-style-type: none;
+}
+
+div.token-input-dropdown ul li.token-input-dropdown-item {
+    background-color: transparent;
+}
+
+div.token-input-dropdown ul li.token-input-dropdown-item2 {
+    background-color: transparent;
+}
+
+div.token-input-dropdown ul li em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+div.token-input-dropdown ul li.token-input-selected-dropdown-item {
+    background-color: rgba(255,22,113,0.9);
+}
+

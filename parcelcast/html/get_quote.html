@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get Quote</title>
+	<meta name="charset" content="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/jqueryui/jquery-ui.min.css">
+
+	<!-- select effect -->
+	<link rel="stylesheet" type="text/css" href="css/select-effect/cs-select.css">
+	<link rel="stylesheet" type="text/css" href="css/select-effect/cs-skin-elastic.css">
+	<!-- quote main css -->
+	<link rel="stylesheet" type="text/css" href="css/get-quote.css">
+	
+</head>
+<body>
+	<div class="get-quote">
+		<div class="row">
+			<div class="home-logo">
+		      <a href="index.html">
+		      	<img src="img/logo.png">
+		      </a>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="status-container text-center">
+					<div class="row status-header">
+						<div class="col-md-4 col-xs-4 text-center">
+							<h3 id="h-0" class="h-active">OPTIONS</h3>
+						</div>
+						<div class="col-md-4 col-xs-4 text-center">
+							<h3 id="h-1">TO</h3>
+						</div>
+						<div class="col-md-4 col-xs-4 text-center">
+							<h3 id="h-2">FROM</h3>
+						</div>
+					</div>
+					<div class="row status-body">
+						<div class="progress-container text-center">
+							<div class="row margin-b-20">
+								<div class="col-md-7 col-xs-7">
+									<div class="progress-bk">
+										<div id="progress-front"></div>
+									</div>
+								</div>
+								<div class="col-md-5 col-xs-5">
+									<span id="progress-value">30% &nbsp;&nbsp;&nbsp;&nbsp;COMPLETE</span>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-4 col-xs-4">
+									<span>TO 78738</span>
+								</div>
+								<div class="col-md-4 col-xs-4">
+									<span>FROM 78738</span>
+								</div>
+								<div class="col-md-4 col-xs-4">
+									<span>WEIGHT 10&nbsp;lbs</span>
+								</div>
+							</div>
+						</div>
+						<div class="options-container status-active" id="status-0">
+							<div class="row">
+								<div class="col-md-12">
+									<div tabindex="0" class="cs-select cs-skin-elastic">
+										<select class="cs-select cs-skin-elastic" name="service-speed">
+											<option value="" disabled="disabled" selected="selected">SEVICE SPEED</option>
+											<option value="SLOWEST" data-class="SLOWEST">SLOWEST</option>
+											<option value="MEDIUM" data-class="MEDIUM">MEDIUM</option>
+											<option value="FAST" data-class="FAST">FAST</option>
+										
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="section-residential">
+										<span>RESIDENTIAL</span>
+										<div class="inline-block">
+											<input type="radio" id="residential-yes" name="residential" value="0" />
+	 										<label for="residential-yes"><span></span>YES</label>
+											<input type="radio" id="residential-no" checked="checked" name="residential" value="1" />
+	 										<label for="residential-no"><span></span>NO</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="section-signature">
+										<span>SIGNATURE</span>
+										<div class="inline-block">
+											<input type="radio" id="signature-yes" name="signature"  value="0"/>
+	 										<label for="signature-yes"><span></span>YES</label>
+											<input type="radio" id="signature-no" checked="checked"  name="signature"  value="1"/>
+	 										<label for="signature-no"><span></span>NO</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="section-insure">
+										<span>INSURE</span>
+										<div class="inline-block">
+											<input type="radio" id="insure-yes" name="insure" value="0"/>
+	 										<label for="insure-yes"><span></span>YES</label>
+											<input type="radio" id="insure-no" name="insure" checked="checked"  value="1"/>
+	 										<label for="insure-no"><span></span>NO</label>
+										</div>
+										<div tabindex="0" class="cs-select cs-skin-elastic">
+											<select class="cs-select cs-skin-elastic" name="service-insure-value">
+												<option value="" disabled="disabled" selected="selected">INSURE VALUE</option>
+												<option value="free" data-class="free">$25 Corvered for Free</option>
+												<option value="100" data-class="100">$100</option>
+												<option value="200" data-class="200">$200</option>
+												<option value="300" data-class="300">$300</option>
+												<option value="400" data-class="400">$400</option>
+			
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="status-input">
+										<input type="text" id="value" name="value" placeholder="VALUE" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div tabindex="0" class="cs-select cs-skin-elastic">
+										<select class="cs-select cs-skin-elastic" id="service-packaging" name="service-packaging">
+											<option value="" disabled="disabled" selected="selected">PACKAGING</option>
+											<option value="PADDED PACK" data-class="PADDED PACK">PADDED PACK</option>
+											<option value="BOX2" data-class="BOX2">BOX2</option>
+											<option value="BOX2" data-class="BOX2">BOX3</option>
+											<option value="BOX2" data-class="BOX2">BOX4</option>
+											<option value="BOX2" data-class="BOX2">BOX5</option>
+											<option value="BOX2" data-class="BOX2">BOX6</option>
+											<option value="YOU PACKAGING" data-class="YOU PACKAGING">YOU PACKAGING</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row display-none" id="your-packaging">
+								<div class="col-md-12">
+									<div class="dimension-container">
+										<input  type="text" id="parcel-length" name="length" placeholder="L (in)" />
+									
+										<input  type="text" id="parcel-width" name="width" placeholder="W (in)" />
+									
+										<input  type="text" id="parcel-height" name="height" placeholder="H (in)" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="to-container" id="status-1">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="status-input">
+										<input type="text" id="to-country" name="to-country" placeholder="COUNTRY" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="status-input">
+										<input type="text" id="to-address" name="to-address" placeholder="ADDRESS" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="status-input">
+										<input type="text" id="to-city" name="to-city" placeholder="CITY" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="status-input">
+										<input type="text" id="to-state" name="to-state" placeholder="STATE" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-xs-6 text-left">
+									<div class="status-input">
+										<input class="max-width-150" id="to-zip"  type="text" name="to-zip" placeholder="ZIP/POSTCODE" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="from-container" id="status-2">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="status-input">
+										<input type="text" id="from-country" name="from-country" placeholder="COUNTRY" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="status-input">
+										<input type="text" id="from-address" name="from-address" placeholder="ADDRESS" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="status-input">
+										<input type="text" id="from-city" name="from-city" placeholder="CITY" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="status-input">
+										<input type="text" id="from-state" name="from-state" placeholder="STATE" />
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-xs-6 text-left">
+									<div class="status-input">
+										<input  class="max-width-150" id="from-zip"  type="text" name="from-zip" placeholder="ZIP/POSTCODE" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row status-footer ">
+						<div class="col-md-3 col-xs-3 text-center">
+							<h3>Steps:</h3>
+						</div>
+						<div class="col-md-6 col-xs-6 text-center step-state">
+							<span><a id="a-0" class="a-active">1</a></span>
+							<span><a id="a-1">2</a></span>
+							<span><a id="a-2">3</a></span>
+						</div>
+						<div class="col-md-3 col-xs-3 text-center">
+							<div class="btn-next">
+								<span>NEXT</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div  class="col-md-9 col-xs-12">
+				<div class="rate-container  mobile-active">
+					<div class="rate-status">
+						<div class="row">
+							
+							<div class="col-md-11 col-xs-11 text-right z-100">
+								<div class="sort-by">
+								<h3>SORT BY</h3></div>
+								<div class="sort-status">
+									<h3>Price</h3>
+									<ul class="sort-item display-none">
+										<li>Price</li>
+										<li>Speed</li>
+									</ul>
+								
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="rate-header">
+						<div class="row">
+							<div class="col-xs-5 col-md-2">
+								<h4>Carrier</h4>
+							</div>
+							<div class="col-md-2 mobile-active">
+								<h4>Service</h4>
+							</div>
+							<div class="col-xs-3 col-md-2">
+								<h4>Rate</h4>
+							</div>
+							<div class="col-xs-4 col-md-3 ">
+								<h4>Delivery Days</h4>
+							</div>
+							<div class="col-md-3 mobile-active">
+								<h4>Confirm Booking</h4>
+							</div>
+						</div>
+					</div>
+					<div class="rate-body">
+						<div class="rate-item-demo display-none">
+							<div class="row">
+								<div class="col-md-2 col-xs-5 ">
+									<img id="carrier" src="img/dhlexpress.png" />
+								</div>
+								<div class="col-md-2  mobile-active">
+									<h4 id="service">Priority Overnight</h4>
+								</div>
+								<div class="col-md-2 col-xs-3 ">
+									<h4 id="rate">$ 10.22</h4>
+								</div>
+								<div class="col-md-3 col-xs-4">
+									<h4 id="delivery_days" class="margin-l-20">3 Days</h4>
+								</div>
+								<div class="col-md-3  mobile-active">
+									<button class="confirm-now">Confirm Now</button>
+								</div>
+							</div>
+						</div>
+						<div class="rate-item-slider-demo display-none">
+							
+							<div class="row">
+								<div class="col-md-12">
+									<h4>Parcelforce Priority International Drop at Post Office</h4>
+									<ul>
+										<li>You need to take your item to a Post Office</li>
+										<li>You can track this item online</li>
+										<li>£60 loss/damage cover included. You can extend this to £1,000.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-5 col-xs-offset-7 mobile-deactive">
+									<button class="confirm-now-mobile">Confirm Now</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ship-review">
+		<div class="row">
+			<div class="home-logo">
+		      <a href="index.html">
+		      	<img src="img/logo.png">
+		      </a>
+		    </div>
+		</div>
+		<div class="row ship-review-body">
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-11 col-sm-offset-1 text-left ship-title">
+						<h1 class="label">REVIEW YOUR SHIPMENT</h1>
+						<p>Your shipment will be delivered to the following address</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="quote-form-to row">
+					<div class="col-sm-3 text-right label">
+						TO:
+					</div>
+					<div class="col-sm-9 text-left value">
+						<span class="to-country"></span> <span class="to-separator"></span>
+						<br>
+						<span class="to-state">Austin</span>
+						<br>
+						<span class="to-city">Texas</span>
+						</br>
+						<span class="to-address"></span>
+					</div>
+				</div>
+				<div class="quote-form-from row">
+					<div class="col-sm-3 text-right label">
+						FROM:
+					</div>
+					<div class="col-sm-9 text-left value">
+						<span class="from-country">United States</span> <span class="from-separator"></span>
+						<br>
+						<span class="from-state">Texas</span>
+						<br>
+						<span class="from-city">Lorem ipsum dolor</span>
+						<br>
+						<span class="from-address"></span>
+						<p class="parcel-dimension">Medium Box: 13.25 x 11.5 x 3.5</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 value-1">
+				<img class="la-carrier" src="img/ups.png" /><br><br>
+				<span class="la-service">Standard Overnight</span><br>
+				<p class="la-residential"></p>
+				<span class="la-rate">Cost: $10.00</span><br>
+				<p class="la-delivery">Delivery Days : 1</p>
+				<span class="la-value">Value: $25.00</span>
+				<p class="la-insure">Insured Value: $25 cover for FREE</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 text-center">
+				<button class="btn btn-purchase">PURCHASE</button>
+			</div>
+		</div>
+	</div>
+	<div class="payment ">
+		<div class="row">
+			<div class="home-logo">
+		      <a href="index.html">
+		      	<img src="img/logo.png">
+		      </a>
+		    </div>
+		</div>
+		<div class="row payment-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center payment-title">
+						<p class="label">PAYMENT METHOD</p>
+						<p>All transactions are secure and encrypted. Credit card information is never stored.</p>
+					</div>
+					<!-- You can make it whatever width you want. I'm making it full width
+					on <= small devices and 4/12 page width on >= medium devices -->
+					<div class="col-xs-12 col-md-8 col-md-offset-2">
+						<!-- CREDIT CARD FORM STARTS HERE -->
+						<div class="panel panel-default credit-card-box">
+							<div class="panel-heading display-table" >
+								<div class="row display-tr" >
+									<h3 class="panel-title display-td" >Credit&nbsp;Card</h3>
+									<div class="display-td" >                            
+										<img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+									</div>
+								</div>                    
+							</div>
+							<div class="panel-body">
+								<form role="form" id="payment-form">
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label for="cardNumber">CARD NUMBER</label>
+												<div class="input-group">
+													<input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus  />
+													<span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+												</div>
+											</div>                            
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-7 col-md-7">
+											<div class="form-group">
+												<label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+												<input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
+											</div>
+										</div>
+										<div class="col-xs-5 col-md-5 pull-right">
+											<div class="form-group">
+												<label for="cardCVC">CV CODE</label>
+												<input type="tel" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<div class="form-group">
+												<label for="couponCode">COUPON CODE</label>
+												<input type="text" class="form-control" name="couponCode" />
+											</div>
+										</div>                        
+									</div>
+									<div class="row">
+										<div class="col-xs-12">
+											<button class="btn btn-success btn-lg btn-block btn-payment" type="submit">Complete Purchase</button>
+										</div>
+									</div>
+									<div class="row" style="display:none;">
+										<div class="col-xs-12">
+											<p class="payment-errors"></p>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>            
+					<!-- CREDIT CARD FORM ENDS HERE -->
+					</div>            
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="order-result">
+		<div class="row">
+			<div class="home-logo">
+		      <a href="index.html">
+		      	<img src="img/logo.png">
+		      </a>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<h1 class="result-title">YOUR ORDER WAS SUCCESSFUL</h1>
+					<p>Order # 1234567890</p>
+				</div>
+				<div class="col-md-12 text-center">
+					<button class="btn btn-print-label">PRINT LABEL</button>
+					<button class="btn btn-customs-doc">CUSTOMS DOC</button>
+					<button class="btn btn-tracking">TRACKING</button>
+				</div>
+				<div class="col-md-12 text-center">
+					<a href="createAccount.html" class="btn btn-create-account">CREATE AN ACCOUNT</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="assets/jquery/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/jqueryui/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- select option -->
+	<script src="js/select-effect/classie.js"></script>
+	<script src="js/select-effect/selectFx.js"></script>
+	<!-- img rotate -->
+	<script src="js/img-rotate/img_rotate.js"></script>
+	<!--quote page main js -->
+	<script src="js/get_quote.js"></script>
+	<!-- stripe -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/1.2.3/jquery.payment.min.js"></script>
+	<!-- If you're using Stripe for payments -->
+	<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+</body>	
+</html>

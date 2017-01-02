@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Customers</title>
+	<meta name="charset" content="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/jqueryui/jquery-ui.min.css">
+	<!-- quote main css -->
+	<link rel="stylesheet" type="text/css" href="css/Admin.css">
+	
+</head>
+<body>
+	<div class="user-admin-back">
+		<div class="row">
+			<div class="home-logo">
+		      <a href="index.html">
+		      	<img src="img/logo.png">
+		      </a>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-3 left-sider-bar">
+				<div class="row">
+					<div class="col-xs-12">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+				      	</button>
+			      	</div>
+		      	</div>
+		      	<div class="row">
+			      	<ul id="bs-example-navbar-collapse-1"  class="collapse navbar-collapse">
+						<li><a href="adminDashboard.html">Dashboard</a></li>
+						<li><a  href="adminReport.html">Reporting</a></li>
+						<li  class="active"><a href="adminCustomers.html">Customers</a></li>
+						<li><a href="adminConfigureRates.html">Configure rates</a></li>
+						<li><a href="adminChangePassword.html">Change Password</a></li>
+					</ul>
+				</div>
+			</div>
+			<div  class="col-md-9 col-sm-9 col-xs-12">
+				<div class="rate-container">
+					<div class="rate-status">
+						<div class="row">
+							<div class="col-md-5 col-xs-5 col-xs-offset-6 col-md-offset-6 z-100">
+								<div class="input-group">
+									<input class="form-control input-search" name="search" placeholder="Name, Street..." required="" autofocus="" type="tel">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+								</div>								
+							</div>
+						</div>
+					</div>
+					<div class="rate-header">
+						<div class="row text-center">
+							<div class="col-xs-4 col-md-2">
+								<h4 class="h-name"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Name</h4>
+							</div>
+							<div class="col-md-2 mobile-active">
+								<h4 class="h-street"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Address1</h4>
+							</div>
+							<div class="col-md-2 mobile-active">
+								<h4 class="h-City"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;City</h4>
+							</div>
+							<div class="col-md-2 mobile-active">
+								<h4 class="h-state"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;State</h4>
+							</div>
+							<div class="col-md-2 col-xs-4">
+								<h4 class="h-email"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Email</h4>
+							</div>
+							<div class="col-md-2 col-xs-4">
+								<h4 class="h-action"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Action</h4>
+							</div>
+						</div>
+					</div>
+					<div class="rate-body">
+						<div class="rate-item-demo display-none">
+							<div class="row text-center">
+								<div class="col-md-2 col-xs-4">
+									<h4 id="name">Vallentin</h4>
+								</div>
+								<div class="col-md-2  mobile-active">
+									<h4 id="street" >18210</h4>
+									<p >Flagler Dr</p>
+								</div>
+								<div class="col-md-2  mobile-active">
+									<h4 id='email'>Austin</h4>
+								</div>
+								<div class="col-md-2 mobile-active ">
+									<h4 id='state'>TX</h4>
+								</div>
+								<div class="col-md-2  col-xs-5">
+									<h4 id='email'>AAA@gmail.com</h4>
+								</div>
+								<div class="col-md-2 col-xs-3 remove-action">
+									<a href="adminCustomerEdit.html">
+							          <h4><span class="glyphicon glyphicon-edit" ></span></h4>
+							        </a>
+							        <a href="#">
+							          <h4><span class="glyphicon glyphicon-remove" ></span></h4>
+							        </a>
+								</div>
+							</div>
+						</div>
+						<div class="rate-item-slider-demo display-none">
+							<div class="row mobile-deactive black-bottom-separate text-center" >
+								<div class="col-xs-4">
+									<h4 id="street" >18210</h4>
+									<p >Flagler Dr</p>
+								</div>
+								<div class="col-xs-4">
+									<h4 id='email'>Austin</h4>
+								</div>
+								<div class="col-xs-4">
+									<h4 id='state'>TX</h4>
+								</div>
+								
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-3 col-xs-3 text-right">
+											<h4>PHONE#&nbsp;:</h4>
+										</div>
+										<div class="col-md-9 text-left">
+											<h4>566-565-2314</h4>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-3 col-xs-3 text-right">
+											<h4>POSTAL&nbsp;:</h4>
+										</div>
+										<div class="col-md-9 text-left">
+											<h4>76170</h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="assets/jquery/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/jqueryui/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--quote page main js -->
+	<script src="js/Admin.js"></script>
+</body>	
+</html>

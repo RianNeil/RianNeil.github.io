@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Dashboard</title>
+	<meta name="charset" content="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/jqueryui/jquery-ui.min.css">
+	<!-- quote main css -->
+	<link rel="stylesheet" type="text/css" href="css/Admin.css">
+	
+</head>
+<body>
+	<div class="user-admin-back">
+		<div class="row">
+			<div class="home-logo">
+		      <a href="index.html">
+		      	<img src="img/logo.png">
+		      </a>
+		    </div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-sm-3 left-sider-bar">
+				<div class="row">
+					<div class="col-xs-12">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					        <span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+				      	</button>
+			      	</div>
+		      	</div>
+		      	<div class="row">
+			      	<ul id="bs-example-navbar-collapse-1"  class="collapse navbar-collapse">
+						<li  class="active"><a href="adminDashboard.html">Dashboard</a></li>
+						<li><a  href="adminReport.html">Reporting</a></li>
+						<li><a href="adminCustomers.html">Customers</a></li>
+						<li><a href="adminConfigureRates.html">Configure rates</a></li>
+						<li><a href="adminChangePassword.html">Change Password</a></li>
+					</ul>
+				</div>
+			</div>
+			<div  class="col-md-9 col-sm-9 col-xs-12">
+				<div class="row mobile-active">
+					<div class="col-md-9 col-sm-9">
+						<div class="row status-left-boxs">
+							<div class="col-md-4 col-sm-4">
+								<div class="order-status-box">
+									<div class="row">
+										<div class="col-md-12 status-title">
+											<div class="row">
+												<div class="col-md-5 col-xs-5 col-md-offset-1 col-xs-offset-1 text-align">
+													<p>TODAY</p>
+												</div>
+												<div class="col-md-5 col-xs-5 text-right">
+													<img src="img/status-arrow.png">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 status-body">
+											<div class="row">
+												<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+													<h3>$ 0.0</h3>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 status-footer">
+											<div class="col-md-11 col-md-offset-1 col-xs-11 col-xs-offset-1 text-left">
+												<p>0 ORDERS</p>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<div class="order-status-box">
+									<div class="row">
+										<div class="col-md-12 status-title">
+											<div class="row">
+												<div class="col-md-5 col-xs-5 col-md-offset-1 col-xs-offset-1 text-align">
+													<p>TODAY</p>
+												</div>
+												<div class="col-md-5 col-xs-5 text-right">
+													<img src="img/status-arrow.png">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 status-body">
+											<div class="row">
+												<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+													<h3>$ 30.43</h3>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 status-footer">
+											<div class="col-md-11 col-md-offset-1 col-xs-11 col-xs-offset-1 text-left">
+												<p>12 ORDERS</p>
+											</div>
+										</div>
+									</div>
+							
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-4">
+								<div class="order-status-box">
+									<div class="row">
+										<div class="col-md-12 status-title">
+											<div class="row">
+												<div class="col-md-5 col-xs-5 col-md-offset-1 col-xs-offset-1 text-align">
+													<p>TODAY</p>
+												</div>
+												<div class="col-md-5 col-xs-5 text-right">
+													<img src="img/status-arrow.png">
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 status-body">
+											<div class="row">
+												<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+													<h3>$ 123.0</h3>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 status-footer">
+											<div class="col-md-11 col-md-offset-1 col-xs-11 col-xs-offset-1 text-left">
+												<p>45 ORDERS</p>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+									</div>
+									<div class="row">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="order-status-box">
+							<div class="row">
+								<div class="col-md-12 status-title">
+									<div class="row">
+										<div class="col-md-5 col-xs-5 col-md-offset-1 col-xs-offset-1 text-align">
+											<p>PROFIT</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 status-body">
+									<div class="row">
+										<div class="col-md-10 col-md-offset-1 col-xs-10 col-xs-offset-1">
+											<h3>$ 0</h3>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 status-footer">
+									<div class="col-md-11 col-md-offset-1 col-xs-11 col-xs-offset-1 text-left">
+										<p>LAST 28 DAYS</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="rate-container">
+					<div class="rate-status">
+						<div class="row">
+							<div class="col-md-5 col-xs-5 col-xs-offset-6 col-md-offset-6 z-100">
+								<div class="input-group">
+									<input class="form-control input-search" name="search" placeholder="Street, Tracking number..." required="" autofocus="" type="tel">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+								</div>								
+							</div>
+						</div>
+					</div>
+					<div class="rate-header">
+						<div class="row text-center">
+							<div class="col-xs-4 col-md-2">
+								<h4 class="h-name"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Name</h4>
+							</div>
+							<div class="col-md-2 mobile-active">
+								<h4 class="h-order-day"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Order day</h4>
+							</div>
+							<div class="col-md-2 mobile-active">
+								<h4 class="h-street"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Street</h4>
+							</div>
+							<div class="col-xs-5 col-md-2 ">
+								<h4 class="h-carrier"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Carrier</h4>
+							</div>
+							<div class="col-md-2 mobile-active">
+								<h4 class="h-service"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Service</h4>
+							</div>
+							<div class="col-md-2 col-xs-3">
+								<h4 class="h-rate"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;Rate</h4>
+							</div>
+						</div>
+					</div>
+					<div class="rate-body">
+						<div class="rate-item-demo display-none">
+							<div class="row text-center">
+								<div class="col-md-2 col-xs-4">
+									<h4 id="name">Vallentin</h4>
+								</div>
+								<div class="col-md-2  mobile-active">
+									<h4 id="order-day">15th May,16</h4>
+									<p>delivered</p>
+								</div>
+								<div class="col-md-2  mobile-active">
+									<h4 id="street" >18210</h4>
+									<p >Flagler Dr</p>
+								</div>
+								<div class="col-md-2 col-xs-5 ">
+									<img id="carrier" src="img/dhlexpress.png" />
+								</div>
+								<div class="col-md-2  mobile-active">
+									<h4 id="service">Priority Overnight</h4>
+								</div>
+								<div class="col-md-2 col-xs-3 ">
+									<h4 id="rate">$ 10.22</h4>
+								</div>
+							</div>
+						</div>
+						<div class="rate-item-slider-demo display-none">
+							<div class="row mobile-deactive black-bottom-separate text-center" >
+								<div class="col-xs-4">
+									<h4 id="order-day" >15th May,16</h4>
+									<p >Delivered</p>
+								</div>
+								<div class="col-xs-4">
+									<h4 id="street">18201</h4>
+									<p >Flagler Dr</p>
+								</div>
+								<div class="col-xs-4">
+									<h4 id="service">Priority Overnight</h4>
+								</div>
+								
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<div class="row text-center">
+										<div class="col-md-12 col-sm-12 col-xs-12 shipping-statues-1">
+											<div class="row">
+												<div class="col-md-6 col-sm-6 col-xs-6 right-border">
+													<h4 class="status-type">DELIVERED</h4>
+												</div>
+												<div class="col-md-6 col-sm-6 col-xs-6">
+													<h4 class="schedule">SIGNED:TEDDYC</h4>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12 statues-comment">
+											<P class="statues-text">Package delivered by local post office</P>
+											<p class="tracking_number">TRACKING 689989823234</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-12">
+									<div class="row text-center">
+										<div class="col-md-12 col-sm-12 col-xs-6">
+											<button class="email-customer">Email Customer</button>
+										</div>
+										<div class="col-md-12 col-sm-12  col-xs-6	">
+											<button class="cancel-order">Cancel Order</button>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-6">
+											<button class="print-postage">Print Label</button>
+										</div>
+										<div class="col-md-12 col-sm-12  col-xs-6	">
+											<button class="track-package">Invoice</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="assets/jquery/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/jqueryui/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--quote page main js -->
+	<script src="js/Admin.js"></script>
+
+
+</body>	
+</html>

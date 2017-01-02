@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>parcel</title>
+    <meta name="charset" content="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/jqueryui/jquery-ui.min.css">
+
+    <!-- select effect -->
+    <link rel="stylesheet" type="text/css" href="css/select-effect/cs-select.css">
+    <link rel="stylesheet" type="text/css" href="css/select-effect/cs-skin-elastic.css">
+    <!-- quote main css -->
+    <link rel="stylesheet" type="text/css" href="css/get-quote.css">
+    <style>
+        /** Style for the body **/
+         body {
+            font: 12px Tahoma, Arial, Helvetica, Sans-Serif;
+        }
+        /** Style for the button & div **/
+         .myButton {
+            padding: .2em 1em;
+            font-size: 1em;
+        }
+        .mySelect {
+            padding: .2em 0;
+            font-size: 1em;
+        }
+        #myDiv {
+            color:green;
+            background-color:#eee;
+            border:2px solid #333;
+            display:none;
+            text-align:justify;
+        }
+        #myDiv p {
+            margin: 15px;
+            font-size: 0.917em;
+        }
+        /** Style for the cointainer **/
+         #body {
+            clear: both;
+            margin: 0 auto;
+            max-width: 534px;
+        }
+        html, body {
+            background-color:white;
+        }
+        hr {
+            margin-bottom:40px;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div id="body">
+        
+        <h2>Slide toggle from right to left and left to right.</h2>
+
+        <hr/>
+        <p>
+            <select class="mySelect">
+                <option value="right">Right</option>
+                <option value="left">Left</option>            
+                <option value="up">Up</option>
+                <option value="down">Down</option>
+            </select>
+            <button id="button" class="myButton">Run Effect</button>
+        </p>
+        <div id="myDiv">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+        </div>
+    </div>
+    <script src="assets/jquery/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/jqueryui/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- select option -->
+    <script src="js/select-effect/classie.js"></script>
+    <script src="js/select-effect/selectFx.js"></script>
+    <!--quote page main js -->
+    <script src="js/get_quote.js"></script>
+    <script type="text/javascript">
+        $(".myButton").click(function () {
+
+        // Set the effect type
+        var effect = 'slide';
+
+        // Set the options for the effect type chosen
+        var options = { direction: $('.mySelect').val() };
+
+        // Set the duration (default: 400 milliseconds)
+        var duration = 500;
+
+        $('#myDiv').toggle(effect, options, duration);
+    });
+    </script>
+</body>
+</html>

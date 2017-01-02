@@ -1,0 +1,169 @@
+.disign-tool
+{
+	height: 770px;
+	width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 40px;
+}
+.tool-status
+{
+	position: relative;
+	height:70px;
+	width: 1200px;
+	padding-left: 528px;
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#505050, red); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#505050, red); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#505050, red); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#505050, red); /* Standard syntax */
+
+}
+.status-active
+{	
+	margin-top: 10px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: solid 2px white;
+	border-radius: 10px;
+	background-color: red;
+	-webkit-animation:status-active 1s infinite;
+   	animation: status-active 1s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes status-active {
+    from {background-color: red;}
+    to {background-color: black;}
+}
+
+/* Standard syntax */
+@keyframes status-active {
+    from {background-color: red;}
+    to {background-color: black;}
+}
+/*@-webkit-keyframes status_boder{
+	from{background:white;}
+	to{background:red;}
+}
+@keyframes status_boder{
+	from{background:white;}
+	to{background:red;}
+}*/
+.status-deactive
+{	
+	margin-top: 40px;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border: solid 2px white;
+	border-radius: 10px;
+	background: black;
+}
+.main-tool
+{
+	background: #452df5;
+	border:solid 2px red;
+	height:700px;
+	width: 1200px;
+	position: relative;
+}
+#product-area
+{
+	width:50%;
+	height:100%;
+	position:absolute;
+	display:inline-block;
+	background:url(../img/backgrounds/model_bk.png);
+}
+#tool-area
+{
+	width:50%;
+	height:100%;
+	background:#505050;
+	display:inline-block;
+	position:absolute;
+	top:0px;
+	left:598px;
+}
+.btn-privious
+{
+	position: absolute;
+	top: 640px;
+	left: 30px;
+	height: 40px;
+	width:150px;
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#505050, red); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#505050, red); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#505050, red); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#505050, red); /* Standard syntax */
+}
+.btn-main-active
+{
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#505050, red); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#505050, red); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#505050, red); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#505050, red); /* Standard syntax */	
+}
+.btn-main-deactive
+{
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#000000, #505050); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#000000, #505050); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#000000, #505050); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#000000, #505050); /* Standard syntax */	
+}
+.btn-156
+{
+	width: 156px;
+}
+.btn-next
+{
+	position: absolute;
+	top: 640px;
+	height: 40px;
+	right: 30px;
+	width:150px;
+	background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#505050, red); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#505050, red); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#505050, red); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#505050, red); /* Standard syntax */
+}
+.draggable
+{
+	padding:20px;
+	background: red;
+}
+.display-none
+{
+	display: none;
+}
+.display-block
+{
+	display: block;
+}
+.margin-t-20
+{
+	margin-top: 20px;
+}
+
+/*file upload button*/
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
