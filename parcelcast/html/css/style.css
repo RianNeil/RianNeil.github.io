@@ -265,6 +265,10 @@ header > .navbar-default {
 	border: 0;
 }
 
+.navbar .navbar-collapse {
+    margin-top: 15px;
+}
+
 ul.navbar-right {
 	background: rgba(24,15,15,0.6);
 	border-radius: 30px;
