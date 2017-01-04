@@ -1,3 +1,177 @@
+/********************************
+*********************************
+	CAROUSEL
+*********************************
+*********************************/
+
+@media(max-width: 480px){
+	div#carousel-slider-container{
+		max-width: 100%;
+	}
+	.carousel-item {
+	    padding: 0px 10px !important;
+	}
+}
+
+
+
+.row.items.the-carousel.slick-initialized.slick-slider {
+    margin-bottom: 60px !important;
+}
+
+.carousel-item{
+	-webkit-transition-duration: 0.1s; /* Safari */
+    transition-duration: 0.1s;
+	padding: 0 60px;
+}
+
+.slick-arrow {
+    display: none !important;
+}
+
+.blurred{
+	opacity: 0.3;
+	-webkit-filter: blur(1.5px);
+	-moz-filter: blur(1.5px);
+	-ms-filter: blur(1.5px);
+	-o-filter: blur(1.5px);
+	filter: blur(1.5px);
+	transition-timing-function: ease-out;
+}
+.not-blurred{
+	opacity: 1;
+	-webkit-filter: blur(0px);
+	-moz-filter: blur(0px);
+	-o-filter: blur(0px);
+	-ms-filter: blur(0px);
+	filter: blur(0px);
+	transition-timing-function: ease-in;
+}
+
+div#carousel-slider-container {
+    max-width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+/*
+CIRCLE
+ */
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 5px solid rgba( 249, 0, 129, 1 );
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background: #14101d;
+  cursor: pointer;
+  margin-top: -20px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  border: 5px solid rgba( 249, 0, 129, 1 );
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background: #14101d;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  -webkit-appearance: none;
+  border: 5px solid rgba( 249, 0, 129, 1 );
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  background: #14101d;
+  cursor: pointer;
+}
+
+/*
+TRACK 
+*/
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: rgba(0,0,0,0.5);
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 15px;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+}
+input[type=range]::-ms-fill-lower {
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: rgba(0,0,0,0.5);
+}
+input[type=range]::-ms-fill-upper {
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: rgba(0,0,0,0.5);
+}
+
+
+
+
+
+
+/********************************
+*********************************
+	GENERAL
+*********************************
+*********************************/
+
+
 body {
 	background: url('../img/bg.jpg') 0 0 repeat-x #201130;
 	background-size: 100% auto;
@@ -513,25 +687,11 @@ have a fixed width and height (but it's not required).
 	margin: 120px auto;
 }
 
-#main .item {
-	transition: all 0.3s linear 0.2s;
-}
-
 #main .item h4 {
 	text-transform: capitalize;
 	font-size: 18px;
 	font-weight: 700;
 	color: rgba(255,255,255,0.7);
-}
-
-#main .item:not(.active) {
-	opacity: 0.3;
-	-webkit-filter: blur(1.5px);
-  -moz-filter: blur(1.5px);
-  -ms-filter: blur(1.5px);
-  -o-filter: blur(1.5px);
-  filter: blur(1.5px);
-  cursor: pointer;
 }
 
 #main .item p {

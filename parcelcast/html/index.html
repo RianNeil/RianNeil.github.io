@@ -11,6 +11,11 @@
 	<link rel="stylesheet" type="text/css" href="assets/jqueryui/jquery-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/chosen/chosen.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<!-- Add the slick-theme.css if you want default styling -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+
+
 	<!-- dropdown with typing -->
     <link rel="stylesheet" href="css/token-input.css" type="text/css" />
 </head>
@@ -271,42 +276,48 @@
 					<h2>features that parcelcast customers <span>love!</span></h2>
 				</div>
 				<div class="ovr-carousel col-sm-12">
-					<div class="row items">
-						<div class="item col-sm-3">
-					        <h4>Amazing Prices</h4>
-					      	<p>Access to rates that only high volume shippers would normally receive and let the savings begin.</p>
+					<div class="carousel-container">
+						<div class="row items the-carousel">
+							<div class="item col-sm-4 active carousel-item not-blurred">
+						        <h4>Global Reach</h4>
+						      	<p>Delivery to 220+ countries and territories around the world.</p>
+							</div>
+							<div class="item col-sm-4 carousel-item blurred">
+						        <h4>Amazing Prices</h4>
+						      	<p>Access to rates that only high volume shippers would normally receive and let the savings begin.</p>
+							</div>
+							<div class="item col-sm-4 carousel-item blurred">
+						        <h4>Command & Control</h4>
+						      	<p>You're in Charge! Our Command and Control center is a robust engine that provides easy tracking management of your shipments, volume & savings reporting with real time instant messaging on alerts and special offers.</p>
+							</div>
+							<div class="item col-sm-4 carousel-item blurred">
+						        <h4>Carrier Choice</h4>
+						      	<p>Our powerful multi-carrier platform enables access to FedEx, UPS, DHL and USPS offering Express, Deferred and Postal solutions for domestic and international shipments from the U.S.</p>
+							</div>
+							<div class="item col-sm-4 carousel-item blurred">
+						        <h4>Smart Routing</h4>
+						      	<p>We give you the option to select well known brands & services based on price & service level to meet your shipping needs.</p>
+							</div>	
+							<div class="item col-sm-4 carousel-item blurred">
+						        <h4>Customer Tracking</h4>
+						      	<p>Peace-of-mind. Let your customers know where their parcel is every step of the way.</p>
+							</div>
+							<div class="item col-sm-4 carousel-item blurred">
+						        <h4>Free Account, No minimums or Monthly Fees</h4>
+						      	<p>Keep it simple. No matter how big or small you are - we give you a free account with no minimum order quantities, long term contracts or monthly subscriptions fees.</p>
+							</div>
+							<div class="item col-sm-4 carousel-item blurred">
+						        <h4>Collection or Drop off</h4>
+						      	<p>The choice is yours. Order collection of your shipment or drop it off. With access to over 30,000 locations within the U.S., some of which are open late and on weekends for convenience.</p>
+							</div>												
 						</div>
-						<div class="item col-sm-3 active">
-					        <h4>Global Reach</h4>
-					      	<p>Delivery to 220+ countries and territories around the world.</p>
-						</div>
-						<div class="item col-sm-3">
-					        <h4>Command & Control</h4>
-					      	<p>You're in Charge! Our Command and Control center is a robust engine that provides easy tracking management of your shipments, volume & savings reporting with real time instant messaging on alerts and special offers.</p>
-						</div>
-						<div class="item col-sm-3">
-					        <h4>Carrier Choice</h4>
-					      	<p>Our powerful multi-carrier platform enables access to FedEx, UPS, DHL and USPS offering Express, Deferred and Postal solutions for domestic and international shipments from the U.S.</p>
-						</div>
-						<div class="clearfix">&nbsp;</div>
-						<div class="item col-sm-3">
-					        <h4>Smart Routing</h4>
-					      	<p>We give you the option to select well known brands & services based on price & service level to meet your shipping needs.</p>
-						</div>	
-						<div class="item col-sm-3">
-					        <h4>Customer Tracking</h4>
-					      	<p>Peace-of-mind. Let your customers know where their parcel is every step of the way.</p>
-						</div>
-						<div class="item col-sm-3">
-					        <h4>Free Account, No minimums or Monthly Fees</h4>
-					      	<p>Keep it simple. No matter how big or small you are - we give you a free account with no minimum order quantities, long term contracts or monthly subscriptions fees.</p>
-						</div>
-						<div class="item col-sm-3">
-					        <h4>Collection or Drop off</h4>
-					      	<p>The choice is yours. Order collection of your shipment or drop it off. With access to over 30,000 locations within the U.S., some of which are open late and on weekends for convenience.</p>
-						</div>												
 					</div>
-					<div class="row">
+
+					<div id="carousel-slider-container">
+						<input id="carousel-slider" type="range" min="0" max="7" value="0" id="fader" step="1">
+					</div>
+
+<!-- 					<div class="row">
 						<ul class="col-sm-6 col-sm-offset-3 ovr-carousel-nav">
 							<li></li>
 							<li class="active"></li>
@@ -317,7 +328,8 @@
 							<li></li>
 							<li></li>														
 						</ul>
-					</div>
+					</div> -->
+
 				</div>
 			</div>
 		</section>
@@ -521,5 +533,8 @@
  	<script type="text/javascript" src="js/jquery.tokeninput.js"></script>
  	<!-- homepage js -->
  	<script type="text/javascript" src="js/homepage.js"></script>
+ 	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
 </body>
 </html>

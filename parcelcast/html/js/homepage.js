@@ -7,7 +7,6 @@ for(var i = 0;i < country_name.length;i++)
     countryArr[i]['id'] = i;
     countryArr[i]['name'] = country_name[i];
 }
-console.log(countryArr);
 $(document).ready(function() {
         $("#to-destination").tokenInput(countryArr);
         
