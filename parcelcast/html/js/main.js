@@ -37,5 +37,5 @@ $('.the-carousel').on('afterChange', function(){
 
 //on input, change to indicated slide
 document.getElementById( 'carousel-slider' ).addEventListener("input", function() {
-	$('.the-carousel').slick( 'slickGoTo', $( "#carousel-slider" ).val() );
+	$('.the-carousel').slick( 'slickGoTo', $( "#carousel-slider" ).val(), true );
 });

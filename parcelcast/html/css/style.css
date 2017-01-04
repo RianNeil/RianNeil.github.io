@@ -20,8 +20,8 @@
 }
 
 .carousel-item{
-	-webkit-transition-duration: 0.1s; /* Safari */
-    transition-duration: 0.1s;
+	-webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
 	padding: 0 60px;
 }
 
