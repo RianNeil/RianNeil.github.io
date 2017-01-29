@@ -220,6 +220,16 @@ section {
     width: 100%;	
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #0470a5;
+    border-color: #ffffff;
+    border-radius: 0 !important;
+    border: 2px solid #ffffff !important;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 /*------------------------------------------------------------------
 2. TYPOGRAPHY
 -------------------------------------------------------------------*/
@@ -237,7 +247,7 @@ h2 {
     letter-spacing: -0.05em;
     margin: 0px;
     text-transform: uppercase;
-    line-height: 1.05em;
+    line-height: 1.4em;
 }
 
 h3 {
@@ -264,6 +274,12 @@ h5 {
 	font-size: 1.15em;
     line-height: 1.35em;
     text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 2em;
+    font-weight: 500;
 }
 
 /*------------------------------------------------------------------
@@ -634,6 +650,19 @@ h5 {
 .homepage .messages{
 	text-align: center;
 	color: #fff;
+}
+
+.homepage .message {
+    color: #fff;
+    margin-top: 15%;
+    text-align: left;
+}
+
+.homepage .message p {
+    max-width: 75%;
+    font-size: 1.1em;
+    line-height: 2em;
+    margin-bottom: 2em;
 }
 
 /*------------------------------------------------------------------
@@ -1056,7 +1085,7 @@ h5 {
 
 .work h2,
 .work h3 {
-	text-align: center;
+	/*text-align: center;*/
 }
 #filters {
 	text-align: center;
@@ -1065,10 +1094,11 @@ h5 {
 
 #filters button {
 	padding: 7px 15px;
-	border: 1px solid #ddd;
+	/*border: 1px solid #ddd;*/
+	border: none;
 	display: inline-block;
 	cursor: pointer;
-	border-radius: 3px;
+	border-radius: 0;
 	background: none;
 	font-size: 0.9em;
 	margin: 0px 3px;
@@ -1113,6 +1143,10 @@ h5 {
 
 .item.w2 {
 	width: 50%;
+}
+
+.width-full .item.w2 {
+	width: 100%;
 }
 
 .item img {

@@ -452,6 +452,7 @@ var PageTransitions = (function () {
         $pageWrapper.data('isAnimating', false);
         pageOverflows($pageTrigger);
         pageNavColors($pageTrigger);
+        $('.pt-page-current').find('.css3Animate')[ 0 ].click();
     }
 
     function resetPage($nextPage, $currentPage) {

@@ -262,19 +262,24 @@ jQuery(document).ready(function() {
 	/* ==============================================
 	/* GALLERY - WORKS
 	================================================== */
-	var $container = $('#gallery').imagesLoaded( function() {
+	var $container = $('[id=gallery]').imagesLoaded( function() {
 		$container.isotope({
 			itemSelector: '.item',
 			masonry: {
 				columnWidth: '.grid-sizer'
 			}
 		});
+		window.myContainer = $container;
 	});
+
+	window.changeFilterPage = function( filterClass ){
+		window.myContainer.isotope({ filter: filterClass });
+	}
 	
-	$('#filters').on( 'click', 'button', function() {
+	$('[id=filters]').on( 'click', 'button', function() {
 		var filterValue = $( this ).attr('data-filter');
 		$container.isotope({ filter: filterValue });
-		$('#filters').find('.checked').removeClass('checked');
+		$( this ).siblings(".checked").removeClass('checked');
     	$( this ).addClass('checked');
 	});
 	
