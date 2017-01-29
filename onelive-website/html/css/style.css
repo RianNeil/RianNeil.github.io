@@ -503,9 +503,10 @@ p {
 }
 
 #mainNav a:hover {
-	font-size: 3.5em;
+	font-size: .6em;
 	opacity: 1;
 }
+
 
 .menu-mobile {
 	position: absolute;
@@ -1758,4 +1759,52 @@ footer.darkFooter .copyright a:hover{
 	color: #000;
 }
 
+footer button, footer a, footer a:focus {
+    background: none;
+    color: white;
+    border: none !important;
+}
 
+
+
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 85%;
+  height: 100%;
+  margin: 20px auto;
+}
+
+
+.white-popup textarea, .white-popup input[type="text"], .white-popup input[type="text"]:hover, .white-popup input[type="text"]:focus, .white-popup input[type="text"]:active, .white-popup input[type="email"], .white-popup input[type="email"]:hover, .white-popup input[type="email"]:focus, .white-popup input[type="email"]:active {
+	    background: none;
+	    box-shadow: none !important;
+	    border: 1px solid #ddd;
+	    font-family: 'Open Sans', sans-serif;
+	    font-size: 15px;
+	    font-weight: 300;
+	    width: 100%;
+	    padding: 9px;
+	    color: #333;
+	    margin-bottom: 20px;
+}
+.white-popup .btn-submit {
+    margin-bottom: 10px;
+    color: #fff;
+    background: #0470a5;
+    border: none;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    overflow: hidden;
+    text-align: center;
+    padding:15px;
+}
+.white-popup .btn-submit:hover {
+    background: #000;
+    color: #fff;
+}
