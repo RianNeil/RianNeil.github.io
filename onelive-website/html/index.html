@@ -124,6 +124,8 @@
 					</div>	
 					<div class="clearfix">&nbsp;</div>
 					<footer>
+
+						<!-- ABOUT POUPUP -->
 						<div id="about-popup" class="white-popup mfp-hide">
 							<h1>ABOUT US</h1>
 							<h3>Lorem ipsum dolor sit amet</h3>
@@ -137,6 +139,8 @@
 								<li><span aria-hidden="true" data-icon=""></span><a href="mailto:email@yourwebsite.com">email@yourwebsite.com</a></li>
 							</ul>				
 						</div>
+
+						<!-- NEWSLETTER POPUPS -->
 						<div id="newsletter-popup" class="white-popup mfp-hide">
 							<h1>NEWSLETTER</h1>
 							<div class="subscribe">
@@ -148,7 +152,9 @@
 			                    <div class="success-message" style="display: none;"></div>
 			                    <div class="error-message" style="display: none;"></div>
 							</div>													
-						</div>						
+						</div>
+
+						<!-- CONTACT POPUPS -->
 						<div id="contact-popup" class="white-popup mfp-hide">
 							<h1>CONTACT</h1>
 							<form action="#" id="contactform">
@@ -163,10 +169,13 @@
 						</div>	
 
 						<hr>
-						<!-- Like so: -->
-						<a href="#about-popup" class="open-popup-link">About Us</a>
-						<a href="#newsletter-popup" class="open-popup-link">Newsletter</a>
-						<a href="#contact-popup" class="open-popup-link">Contact</a>
+						<div id="footer-links">
+							<!-- Like so: -->
+							<a href="#about-popup" class="open-popup-link"><h3>About Us</h3><small>Who we are</small></a>
+							<a href="#newsletter-popup" class="open-popup-link"><h3>Newsletter</h3><small>Check our news</small></a>
+							<a href="#contact-popup" class="open-popup-link"><h3>Contact</h3><small>Write us!</small></a>
+						</div>
+
 					</footer>				
 				</div>
 			</div>
@@ -732,17 +741,17 @@
 	<script type="text/javascript" src="js/transition.js"></script>
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/velocity/1.1.0/velocity.min.js'></script>
 
-	<script type="text/javascript">$(document).ready(function() {
-  $('.image-link').magnificPopup({type:'image'});
-});
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.image-link').magnificPopup({type:'image'});
+			$('.open-popup-link').magnificPopup({
+				type:'inline',
+				midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+			});
 
 
-
-$('.open-popup-link').magnificPopup({
-  type:'inline',
-  midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
-});
-</script>
+		});
+	</script>
 
 </body>
 </html>

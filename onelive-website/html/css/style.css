@@ -356,6 +356,10 @@ p {
 	top: -61px;
 }
 
+nav#mainNav.lightNav {
+    background: black !important;
+}
+
 .lightNav .round-logo {
 	border: 2px solid rgba(256,256,256,0.5);
 }
@@ -1664,7 +1668,7 @@ footer.lightFooter a{
 
 footer.darkFooter,
 footer.darkFooter a{
-	color: #000;
+	color: #000 !important;
 }
 
 footer .footer-social {
@@ -1765,6 +1769,78 @@ footer button, footer a, footer a:focus {
     border: none !important;
 }
 
+div#footer-links {
+    padding-top: 20px;
+}
+
+footer a.open-popup-link {
+    border-top: 3px solid rgba(255,255,255,0.2) !important;
+    border-bottom: 3px solid rgba(255,255,255,0.2) !important;
+    transition: 0.2s;
+    position: relative !important;
+    bottom: 0px !important;
+    background: transparent !important;
+    height: 45px;
+    top: -1px;
+    border-radius: 0px !important;
+    padding-bottom: 35px !important;
+    margin: 0 15px;
+    padding-bottom: 30px !important;
+}
+
+footer.darkFooter a.open-popup-link{
+    border-top: 3px solid rgba(0,0,0,0.2) !important;
+	border-bottom: 3px solid rgba(0,0,0,0.2) !important;
+}
+
+footer a.open-popup-link:hover {
+    border-top: 3px solid #0470a5 !important;
+    border-radius: 0px;
+    border-bottom: 3px solid #0470a5 !important;
+    transition: 0.2s;
+    position: relative !important;
+    bottom: 5px !important;
+    color: black;
+    height: 60px;
+}
+
+footer a.open-popup-link>h3{
+	margin: 0px !important;
+}
+
+footer a.open-popup-link>small{
+	opacity: 0;
+	position: relative;
+	transition: 0.2s;
+    top: -18px !important;
+}
+footer a.open-popup-link:hover>small{
+	opacity: 1;
+	position: relative;
+	transition: 0.2s;	
+    top: 0 !important;
+}
+
+footer hr {
+    margin: 0 !important;
+}
+
+footer {
+    height: 90px !important;
+    overflow: visible;
+}
+
+@media(max-width: 400px){
+
+	footer a.open-popup-link{
+	    margin: 0 0px;
+	}
+
+}
+
+.pt-page-one footer a.open-popup-link:hover {
+    color: white;
+}
 
 
 
