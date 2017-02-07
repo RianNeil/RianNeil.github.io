@@ -670,6 +670,14 @@ nav#mainNav.lightNav {
     margin-bottom: 2em;
 }
 
+.homepage footer {
+    color: white !important;
+}
+
+.pt-page.pt-page-one.homepage {
+    background: black !important;
+}
+
 /*------------------------------------------------------------------
 7. ABOUT ME
 -------------------------------------------------------------------*/
@@ -1672,7 +1680,7 @@ footer.darkFooter a{
 }
 
 footer .footer-social {
-	margin: 20px 0px;
+	margin: 0px;
 }
 
 footer .footer-social li{

@@ -2,7 +2,7 @@
 
 	//set your video options
 	var source = 'vids/video.mp4',
-		sound = true,
+		sound = false,
 		image_replacement = true;
 	
 	//start the video functios. 
