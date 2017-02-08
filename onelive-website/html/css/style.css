@@ -657,6 +657,11 @@ nav#mainNav.lightNav {
 	color: #fff;
 }
 
+.homepage .message h2 {
+    background: rgba(0,0,0,.75);
+    padding: 10px;
+}
+
 .homepage .message {
     color: #fff;
     margin-top: 15%;
@@ -668,15 +673,17 @@ nav#mainNav.lightNav {
     font-size: 1.1em;
     line-height: 2em;
     margin-bottom: 2em;
+    background: rgba(0,0,0,.75);
+    padding: 10px;
 }
 
 .homepage footer {
     color: white !important;
 }
 
-.pt-page.pt-page-one.homepage {
+/*.pt-page.pt-page-one.homepage {
     background: black !important;
-}
+}*/
 
 /*------------------------------------------------------------------
 7. ABOUT ME
