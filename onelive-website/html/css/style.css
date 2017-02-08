@@ -679,6 +679,9 @@ nav#mainNav.lightNav {
 
 .homepage footer {
     color: white !important;
+    position: absolute;
+    bottom: 0 !important;
+    left: 0; 
 }
 
 /*.pt-page.pt-page-one.homepage {
