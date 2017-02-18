@@ -1175,6 +1175,8 @@ a.navbar-brand.round-logo img {
 
 }
 
+
+
 #gallery .grid-sizer {
 	position: absolute;
 }
@@ -1190,6 +1192,10 @@ a.navbar-brand.round-logo img {
 
 .width-full .item.w2 {
 	width: 100%;
+}
+
+.ecommerce .item {
+    width: 100%;
 }
 
 .item img {
