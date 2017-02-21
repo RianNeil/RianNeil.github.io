@@ -330,7 +330,7 @@ p {
 }
 
 #loader-circle {
-	    display: none;
+	    display: none !important;
 }
 
 /*------------------------------------------------------------------
