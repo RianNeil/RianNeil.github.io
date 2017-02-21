@@ -874,7 +874,8 @@ a.navbar-brand.round-logo img {
 .pie-chart .percentage {
 	font-size: 2em;
 	font-weight: 200;
-	top: 5px;
+	/*top: 5px;*/
+	top: 20%;
 }
 
 /*.pie-chart .percentage-title{
@@ -882,7 +883,7 @@ a.navbar-brand.round-logo img {
 }*/
 .pie-chart .percentage-title {
     top: 30%;
-    line-height: 21px;
+    line-height: 18px;
     font-size: 14px;
 }
 
@@ -896,6 +897,10 @@ a.navbar-brand.round-logo img {
 
 .pie-chart:hover .percentage{
 	opacity: 1;
+}
+
+.chart-instagram, .chart-snapchat, .chart-twitter, .chart-facebook {
+    padding-top: 10px;
 }
 
 .experience{
