@@ -12,12 +12,12 @@ jQuery(document).ready(function() {
 	=============================================== */
 	$('#loader-circle').circleProgress({
 		startAngle: Math.PI*1.5,
-		thickness: 3,
+		thickness: 0,
 		emptyFill: "#888",
 	    value: 1,
 	    size: 163,
 	    fill: {
-			color: "#000" 
+			color: "#fff" 
 	    }
 	});	
 	
