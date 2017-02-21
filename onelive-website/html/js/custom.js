@@ -17,7 +17,7 @@ jQuery(document).ready(function() {
 	    value: 1,
 	    size: 163,
 	    fill: {
-			color: "#fff" 
+			color: "#000" 
 	    }
 	});	
 	
