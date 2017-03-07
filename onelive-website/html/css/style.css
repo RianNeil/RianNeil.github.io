@@ -774,13 +774,14 @@ a.navbar-brand.round-logo img {
 
 .aboutme .skills{
 	background: url('../img/skills-background.jpg');
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		-ms-background-size: cover;
 		 -o-background-size: cover;
 			background-size: cover;
-	background-position: center center;
+	background-position: center top;
+	min-height: 100%;
 }
 
 .aboutme .skills h3, 
