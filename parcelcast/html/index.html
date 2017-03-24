@@ -540,7 +540,6 @@
 		</div>
 
 		<section id="tracking-form">
-			<!-- <iframe src="http://track.parcelcast.com/" style="border:0px #ffffff none;" name="myiFrame" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="300px" width="100%" allowfullscreen></iframe> -->
 			<a href="http://parcelcast.com" class="store-home--text">Parcelcast</a>
 			<p class="lead">Enter a tracking number, and get tracking results.</p>
 
@@ -575,121 +574,5 @@
 
 
 
-<script type="text/javascript">
-$(document).ready(function() {
-	$('.popup-wrap').removeClass('hidden').addClass('visible');
-
-	$('.popup-btn').click(function(e) {
-    $('.popup-wrap').fadeIn(250);
-    $('.popup-box').removeClass('transform-out').addClass('transform-in');
-
-    e.preventDefault();
-  });
-
-  $('.popup-close').click(function(e) {
-    $('.popup-wrap').fadeOut(500);
-    $('.popup-box').removeClass('transform-in').addClass('transform-out');
-
-    e.preventDefault();
-  });
-});
-</script>
 
 
-<style type="text/css">
-
-.popup-wrap {
-  width: 100%;
-  height: 100%;
-  display: none;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  content: '';
-  background: rgba(0, 0, 0, 0.85);
-}
-
-.popup-box {
-  width: 100%;
-  height: 100%;
-  padding: 50px 75px;
-  transform: translate(-50%, -50%) scale(0.5);
-  /*position: absolute;*/
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
-  border-radius: 3px;
-  background: #221131;
-  text-align: center;
-  z-index: 9999;
-}
-.popup-box h2 {
-  color: #fff;
-  margin-top: 100px; 
-}
-.popup-box h3 {
-  color: #888;
-}
-.popup-wrap input {
-    margin: 5px;
-    border: 1px solid #000;
-    padding: 4px;
-    width: 30%;
-}
-input.btn-submit {
-    background: #85327b;
-    border: none;
-    padding: 10px 20px;
-    color: #fff;
-    text-transform: uppercase;
-    border-radius: 50px;
-    margin-top: 20px;
-}
-.popup-box .close-btn {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  -webkit-transition: all ease 0.50s;
-  transition: all ease 0.75s;
-  background: #d9534f;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  line-height: 170%;
-}
-.popup-box .close-btn:hover {
-  -webkit-transform: rotate(360deg);
-  transform: rotate(360deg);
-}
-
-.transform-in, .transform-out {
-  display: block;
-  -webkit-transition: all ease 0.5s;
-  transition: all ease 0.5s;
-}
-
-.transform-in {
-  -webkit-transform: translate(-50%, -50%) scale(1);
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.transform-out {
-  -webkit-transform: translate(-50%, -50%) scale(0.5);
-  transform: translate(-50%, -50%) scale(0.5);
-}
-#tracking-form {
-    clear: both;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.store-home--text {
-    display: inline-block;
-    font-size: 30px;
-    font-weight: 600;
-    color: #1bbae1;
-}
-</style>
