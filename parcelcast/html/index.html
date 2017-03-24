@@ -21,7 +21,7 @@
 </head>
 <body>
 
-	<div class="popup-wrap">
+	<div class="popup-wrap hidden">
 		<div class="popup-box">
 		  <h2>SIGN UP</h2>
 		  <!-- <h3>A sub-heading for the popup with a little description.</h3> -->
@@ -570,8 +570,10 @@
 
 
 <script type="text/javascript">
-	$(document).ready(function() {
-  $('.popup-btn').click(function(e) {
+$(document).ready(function() {
+	$('.popup-wrap').removeClass('hidden').addClass('visible');
+
+	$('.popup-btn').click(function(e) {
     $('.popup-wrap').fadeIn(250);
     $('.popup-box').removeClass('transform-out').addClass('transform-in');
 
