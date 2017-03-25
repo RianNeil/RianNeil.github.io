@@ -581,14 +581,9 @@
 
 
 <script type="text/javascript">
-	// A $( document ).ready() block.
-	$( document ).ready(function() {
-		console.log( "ready to go!" );
-		let checkExists = setInterval(() => {
-			$("input#tracking_number").css("border", "none");
-			$("input#tracking_number").css("background", "none");
-		    clearInterval(checkExists);    
-		});		
-	});
-	
+	let checkExists = setInterval(() => {
+		$("input#tracking_number").css("border", "none");
+		$("input#tracking_number").css("background", "none");
+	    clearInterval(checkExists);    
+	});		
 </script>
