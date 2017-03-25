@@ -1568,6 +1568,17 @@ footer .disclaimer ul li a {
 	    color: #1bbae1;
 	}
 
+	input#tracking_number {
+	    background: none;
+	    border: none;
+	    border-bottom: 2px solid #fff;
+	    border-radius: 0;
+	}
+	button#as_track {
+	    background: none;
+	    border: none;
+	}	
+
 @media all and (min-width: 360px) and (max-width: 768px) {
 	.line-curve
 	{
