@@ -1938,3 +1938,7 @@ footer {
     background: #000;
     color: #fff;
 }
+
+.filter-default {
+	min-height: 500px;
+}
