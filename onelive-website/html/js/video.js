@@ -1,7 +1,7 @@
 "use strict";
 
 	//set your video options
-	var source = 'vids/video.mp4',
+	// var source = 'vids/video.mp4',
 		sound = false,
 		image_replacement = true;
 	

@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 	/* ==============================================
 	/*	OPTIONS FOR THE IMAGE SLIDER
 	=============================================== */
-	var image_slider = false; //this variable is necessary to start the image slider, 
+	var image_slider = true; //this variable is necessary to start the image slider, 
 							  //if you want to use the image slider, change it to true
 
 	/* ==============================================
