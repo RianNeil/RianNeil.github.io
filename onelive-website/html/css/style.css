@@ -1951,3 +1951,9 @@ footer {
     text-align: center;
 }
 
+
+@media (max-width: 767px){
+	#mainNav {
+	    height: 60px;
+	}
+}
