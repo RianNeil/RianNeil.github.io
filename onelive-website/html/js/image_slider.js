@@ -34,8 +34,7 @@ jQuery(function($){
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
 												{image : 'https://preview.ibb.co/gGOC6Q/background_1.jpg', title : 'White - Creative Resume & Portfolio Template'},
-												{image : 'http://placehold.it/1280x720&text=Image+2', title : 'White - Creative Resume & Portfolio Template'},
-												{image : 'http://placehold.it/1280x720&text=Image+3', title : 'White - Creative Resume & Portfolio Template'}
+												{image : 'http://preview.ibb.co/eEbDfk/background_2.jpg', title : 'White - Creative Resume & Portfolio Template'}
 									],
 										
 		// Theme Options			   
@@ -44,6 +43,10 @@ jQuery(function($){
 			
 	});
 });
+
+
+
+
 
 
 
