@@ -34,7 +34,8 @@ jQuery(function($){
 		thumbnail_navigation    :   0,			// Thumbnail navigation
 		slides 					:  	[			// Slideshow Images
 												{image : 'img/background-1.jpg', title : 'White - Creative Resume & Portfolio Template'},
-												{image : 'img/background-2.jpg', title : 'White - Creative Resume & Portfolio Template'}
+												{image : 'img/background-2.jpg', title : 'White - Creative Resume & Portfolio Template'},
+												{image : 'img/background-3.jpg', title : 'White - Creative Resume & Portfolio Template'}
 									],
 										
 		// Theme Options			   
