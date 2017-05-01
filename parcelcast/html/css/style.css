@@ -1,5 +1,15 @@
 /********************************
 *********************************
+	GENERAL
+*********************************
+*********************************/
+
+	.tt-upper {
+		text-transform: uppercase;		
+	}
+
+/********************************
+*********************************
 	CAROUSEL
 *********************************
 *********************************/
@@ -1596,3 +1606,28 @@ footer .disclaimer ul li a {
 		margin-left: 0px !important;
 	}
 }
+
+
+@media (max-width:767px){
+	ul.navbar-right {
+	    background: rgba(86, 49, 92, 0.45);
+	    border-radius: 0;
+	}
+	ul.navbar-right > li:not(:last-child):after {
+		display: none;
+	}
+	.popup-box {
+	    padding: 4%;
+	}	
+	.popup-wrap input {
+	    width: 90%;
+	}	
+	ul.nav.nav-tabs.shipments li {
+	    width: 100%;
+	}
+	ul.shipments li a {
+		margin: 5px !important;
+	    border-radius: 25px !important; 
+	}	
+}
+

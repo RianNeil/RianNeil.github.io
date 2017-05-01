@@ -23,10 +23,14 @@
 
 	<div class="popup-wrap hidden">
 		<div class="popup-box">
-		  <h2>REQUEST AN ACCOUNT</h2>
+		  <h2 class="tt-upper">See If Your Qualify For An Account</h2>
 		  <!-- <h3>A sub-heading for the popup with a little description.</h3> -->
 			<form action="https://formspree.io/info@parcelcast.com"
 			      method="POST">
+			    <input class="collect_typical_shipping" type="text" name="typical_shipping" placeholder="Typical Shipping Service, Overnight, Ground, LTL">
+			    <input class="collect_warehouse" type="text" name="do_you_warehouse" placeholder="Do You Warehouse Your Products or Use a 3PL Provider">
+			    <br />
+
 			    <input class="collect_name" type="text" name="name" placeholder="Name">
 			    <input class="collect_email" type="email" name="_replyto" placeholder="Email">
 			    <br />
@@ -402,7 +406,7 @@
  									</tr>
  								</table>
  							</td>
- 							<td>
+ 							<td class="hidden-xs">
  								<table class="table">
  									<tr>
  										<td>Domestic</td>
@@ -416,7 +420,7 @@
 							</td>
  						</tr>
  						<tr>
- 							<td colspan="2" class="text-left"><button class="get_quote">Request An Account</button></td>
+ 							<td colspan="2" class="text-left"><button class="get_quote popup-btn">Request An Account</button></td>
  						</tr>
  					</table>
 					    </div>
@@ -427,7 +431,7 @@
  							<td width="50%">Domestic U.S.</td>
  						</tr> -->
  						<tr>/
- 							<td>
+ 							<td class="hidden-xs">
  								<table class="table">
  									<tr>
  										<td>Domestic</td>
@@ -441,31 +445,96 @@
 							</td>
  							<td>
  								<table class="table table-condensed">
+	 								<tr>
+	 									FEDEX
+	 								</tr>
  									<tr>
- 										<td>To London</td>
- 										<td>To sidney</td>
- 										<td>to canada</td>
+	 									<td>Weight</td>
+ 										<td>Los Angeles</td>
+ 										<td>New York</td>
+ 										<td>Miami</td>
  									</tr>
  									<tr>
- 										<td>1 lb</td>
- 										<td>Expess</td>
- 										<td>$ 0.00</td>
+	 									<td>1</td>
+ 										<td>$ 5.90</td>
+ 										<td>$ 5.90</td>
+ 										<td>$ 5.90</td>
  									</tr>
  									<tr>
- 										<td>1 lb</td>
- 										<td>Deterred</td>
- 										<td>$ 0.00</td>
+	 									<td>10</td>
+ 										<td>$ 6.52</td>
+ 										<td>$ 7.26</td>
+ 										<td>$ 6.52</td>
  									</tr>
  									<tr>
- 										<td>1 lb</td>
- 										<td>Postal</td>
- 										<td>$ 0.00</td>
+	 									<td>100</td>
+ 										<td>$ 27.94</td>
+ 										<td>$ 30.89</td>
+ 										<td>$ 27.94</td>
  									</tr>
  								</table>
+ 								<table class="table table-condensed">
+	 								<tr>
+	 									USPS
+	 								</tr>
+ 									<tr>
+	 									<td>Weight</td>
+ 										<td>Los Angeles</td>
+ 										<td>New York</td>
+ 										<td>Miami</td>
+ 									</tr>
+ 									<tr>
+	 									<td>1</td>
+ 										<td>$ 5.60</td>
+ 										<td>$ 5.62</td>
+ 										<td>$ 5.60</td>
+ 									</tr>
+ 									<tr>
+	 									<td>10</td>
+ 										<td>$ 20.51</td>
+ 										<td>$ 24.62</td>
+ 										<td>$ 20.51</td>
+ 									</tr>
+ 									<tr>
+	 									<td>100</td>
+ 										<td>N/A</td>
+ 										<td>N/A</td>
+ 										<td>N/A</td>
+ 									</tr>
+ 								</table> 
+ 								<table class="table table-condensed">
+	 								<tr>
+	 									DHL
+	 								</tr>
+ 									<tr>
+	 									<td>Weight</td>
+ 										<td>Los Angeles</td>
+ 										<td>New York</td>
+ 										<td>Miami</td>
+ 									</tr>
+ 									<tr>
+	 									<td>1</td>
+ 										<td>$ 3.36</td>
+ 										<td>$ 3.36</td>
+ 										<td>$ 3.36</td>
+ 									</tr>
+ 									<tr>
+	 									<td>10</td>
+ 										<td>$ 12.78</td>
+ 										<td>$ 16.73</td>
+ 										<td>$ 12.78</td>
+ 									</tr>
+ 									<tr>
+	 									<td>100</td>
+ 										<td>N/A</td>
+ 										<td>N/A</td>
+ 										<td>N/A</td>
+ 									</tr>
+ 								</table>  																
  							</td>
  						</tr>
  						<tr>
- 							<td colspan="2" class="text-right"><button class="get_quote">Request an Account</button></td>
+ 							<td colspan="2" class="text-right"><button class="get_quote popup-btn">Request an Account</button></td>
  						</tr>
  					</table>
 					    </div>
@@ -527,7 +596,9 @@
 
 	<footer class="row">
 		<div class="col-sm-6 col-sm-offset-3">
-			<p class="opacity">Welcome to Parcelcast the only ecommerce logistics shipping partner you will need to save money on your shipments. Parcelcast allows anyone to sign up to get great discounts. No longer do you have to try and negotiate rates from carrier to carrier who all base their discounts off your volume.</p>
+			<p class="opacity">
+				Welcome to Parcelcast the only ecommerce logistics shipping partner you will need to save money on your shipments. No longer do you have to try and negotiate rates from carrier to carrier who all base their discounts off your volume.  Parcelcast offers one of the most flexible 3rd party logistics business models on the market.  Let our experts manage your warehouse operation and lower your costs and drive up your profits.
+			</p>
 			<p>600 Congress Ave, Austin, TX 78701</p>
 			<p>contact@parcelcast.com</p>
 			<ul class="social-media">
