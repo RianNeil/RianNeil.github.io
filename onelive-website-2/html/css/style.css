@@ -774,7 +774,7 @@ a.navbar-brand.round-logo img {
 }
 
 .aboutme .skills{
-	background: url('../img/skills-background.jpg');
+	/*background: url('../img/skills-background.jpg');*/
 	background-repeat: repeat;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
@@ -783,6 +783,15 @@ a.navbar-brand.round-logo img {
 			background-size: cover;
 	background-position: center top;
 	min-height: 100%;
+}
+
+.skill-content h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2em;
+    font-weight: 500 !important;
+    text-transform: none;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .aboutme .skills h3, 
@@ -805,6 +814,18 @@ a.navbar-brand.round-logo img {
 
 .aboutme .skills .skill{
 	margin-bottom: 30px;
+}
+
+a.btn-commerce {
+    background: #333;
+    border-radius: 50px;
+    color: #74c3ef;
+    padding: 10px 30px;
+}
+
+img.brand-icons {
+    margin: 0 auto !important;
+    display: block;
 }
 
 .aboutme .bar-graph {
@@ -1210,6 +1231,12 @@ a.navbar-brand.round-logo img {
 
 .ecommerce .item {
     width: 100%;
+}
+
+img.page_commerce-one-logo, img.page_commerce-one-icons {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    display: block !important;
 }
 
 .item img {
