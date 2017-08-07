@@ -1984,3 +1984,7 @@ footer {
 	    height: 60px;
 	}
 }
+
+p.ta-center {
+    text-align: center;
+}
