@@ -1988,3 +1988,10 @@ footer {
 p.ta-center {
     text-align: center;
 }
+
+.skill li {
+    list-style: disc;
+}
+ul.tier-two {
+    margin-left: 20px;
+}
