@@ -2038,7 +2038,7 @@ body .skill {
 
 	.open-modal:hover {background-color: #bff2e5}
 
-	.modal {
+/*	.modal {
 	    background-color: #dbd9d9;
 	    display: none;
 	    position: fixed;
@@ -2052,7 +2052,7 @@ body .skill {
 	    border-radius: 5px;
 	    z-index: 10;
 	    box-shadow: none;
-	}
+	}*/
 
 	.close-modal {
 	  color:  #fff;
@@ -2067,7 +2067,9 @@ body .skill {
 	    font-size: 21px;
 	    font-weight: bold;
 	}	
-
+	.modal-image img {
+	    max-width: 100%;
+	}
 
 
 
