@@ -2003,6 +2003,18 @@ ul.tier-two {
 body .skill {
     color: #8d8e8e;
 }
+.contact_form input[type="submit"] {
+    background: black;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+}
+.contact_form input {
+    width: 50%;
+    min-width: 285px;
+    margin-bottom: 12px;
+}
 
 /*==========================================
 ============================================
