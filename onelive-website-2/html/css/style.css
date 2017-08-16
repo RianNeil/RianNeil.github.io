@@ -2004,16 +2004,16 @@ body .skill {
     color: #8d8e8e;
 }
 .contact_form input[type="submit"] {
-    background: black;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    margin-top: 15px;
+    background: black !important;
+    border: none !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    margin-top: 15px !important;
 }
 .contact_form input {
-    width: 50%;
-    min-width: 285px;
-    margin-bottom: 12px;
+    width: 50% !important;
+    min-width: 285px !important;
+    margin-bottom: 12px !important;
 }
 
 /*==========================================
