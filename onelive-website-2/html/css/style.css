@@ -28,8 +28,9 @@ body {
 
 body {
 	background: #000;
-	color: #000;
-	font-family: 'Raleway', sans-serif;
+	color: #333333;
+	/*font-family: 'Raleway', sans-serif;*/
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	font-style: normal;
 	font-size: 14px;
@@ -44,7 +45,7 @@ a:focus,
 a:active { 
 	outline: none !important;
 	text-decoration: none;
-	color: #000;
+	color: #333333;
 }
 
 ul,li { 
@@ -222,7 +223,7 @@ section {
 
 .btn-primary {
     color: #fff;
-    background-color: #0470a5;
+    background-color: #333333;
     border-color: #ffffff;
     border-radius: 0 !important;
     border: 2px solid #ffffff !important;
@@ -236,12 +237,14 @@ section {
 
 h1 {
 	margin: 0px;
-	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Montserrat', sans-serif;*/
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
     font-size: 4.5em;
     letter-spacing: -0.05em;
@@ -258,7 +261,8 @@ h3 {
 }
 
 h4 {
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
     font-size: 3.4em;
     letter-spacing: -0.05em;
@@ -269,7 +273,8 @@ h4 {
 }
 
 h5 {
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	font-size: 1.15em;
     line-height: 1.35em;
@@ -277,9 +282,12 @@ h5 {
 }
 
 p {
-    font-size: 1.2em;
+	/* font-size: 1.2em;
     line-height: 2em;
-    font-weight: 500;
+    font-weight: 500;*/
+    font-size: 18px;
+    line-height: 1.75em;
+    font-weight: 200;
 }
 
 /*------------------------------------------------------------------
@@ -319,7 +327,8 @@ p {
     margin-left: -30px;
     margin-top: -35px;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
     font-size: 5em;
     line-height: 1em;
@@ -346,7 +355,8 @@ p {
     height: 84px;
     font-size: 0.7em;
     font-style: normal;
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 }
 
@@ -450,7 +460,7 @@ a.navbar-brand.round-logo img {
 }
 
 .darkNav ul li button {
-	color: #000;
+	color: #333;
 }
 
 #mainNav ul li button:hover,
@@ -514,7 +524,7 @@ a.navbar-brand.round-logo img {
 
 .darkNav a ,
 .darkNav button{
-    color: #000;
+    color: #333;
 }
 
 #mainNav a {
@@ -763,7 +773,8 @@ a.navbar-brand.round-logo img {
 	float: left;
 	margin-bottom: 10px;
 	text-transform: uppercase;
-	font-family: 'Montserrat', sans-serif;
+	/*font-family: 'Montserrat', sans-serif;*/
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 }
 
@@ -786,12 +797,15 @@ a.navbar-brand.round-logo img {
 }
 
 .skill-content h2 {
-    font-family: 'Raleway', sans-serif;
-    font-size: 2em;
-    font-weight: 500 !important;
+    /*font-family: 'Raleway', sans-serif;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-size: 2em;*/
+    font-size: 40px; 
+    font-weight: 200 !important;
     text-transform: none;
     margin-top: 20px;
     margin-bottom: 10px;
+    letter-spacing: 0; 
 }
 
 .aboutme .skills h3, 
@@ -1184,7 +1198,7 @@ img.brand-icons {
 
 #filters button:hover,
 #filters button.checked {
-	background: #000;
+	background: #333333;
 	color: #fff;
 }
 
@@ -1486,7 +1500,8 @@ img.page_commerce-one-logo, img.page_commerce-one-icons {
 	text-align: center;
     display: block;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 2em;
     padding: 15px 0px;
@@ -1554,7 +1569,7 @@ img.page_commerce-one-logo, img.page_commerce-one-icons {
 
 .blog .post-right .info-post a:hover{
     background: #fff;
-    color: #000;
+    color: #333;
     text-decoration: underline;
 }
 
@@ -1649,7 +1664,7 @@ textarea.form-control::-webkit-input-placeholder {
 .send-div button:hover{
 	border-color: #fff;
 	background: #fff;
-	color: #000;
+	color: #333;
 }
 
 .success-message,
@@ -1710,7 +1725,7 @@ textarea.form-control::-webkit-input-placeholder {
 
 #cd-zoom-in,
 #cd-zoom-out {
-	background-color:#000;
+	background-color:#333;
 }
 
 /*------------------------------------------------------------------
@@ -1723,7 +1738,7 @@ footer hr{
 }
 
 footer.darkFooter hr{
-	border-color: #000;
+	border-color: #333;
 }
 
 footer.lightFooter hr{
@@ -1753,7 +1768,7 @@ footer.lightFooter a{
 
 footer.darkFooter,
 footer.darkFooter a{
-	color: #000 !important;
+	color: #333 !important;
 }
 
 footer .footer-social {
@@ -1830,13 +1845,13 @@ footer a:hover.toTop{
 }
 
 footer.lightFooter a:hover.toTop{
-	color: #000;
+	color: #333;
 	background: #fff;
 }
 
 footer.darkFooter a:hover.toTop{
 	color: #fff;
-	background: #000;
+	background: #333;
 }
 
 footer .copyright a:hover{
@@ -1845,7 +1860,7 @@ footer .copyright a:hover{
 }
 
 footer.darkFooter .copyright a:hover{
-	color: #000;
+	color: #333;
 }
 
 footer button, footer a, footer a:focus {
@@ -1885,7 +1900,7 @@ footer a.open-popup-link:hover {
     transition: 0.2s;
     position: relative !important;
     bottom: 5px !important;
-    color: black;
+    color: #333;
     height: 60px;
 }
 
@@ -1913,6 +1928,11 @@ footer hr {
 footer {
     height: 90px !important;
     overflow: visible;
+}
+
+img.footer-logo-olm {
+    max-width: 150px;
+    margin-bottom: 25px;
 }
 
 @media(max-width: 400px){
@@ -1958,7 +1978,8 @@ footer {
     background: #0470a5;
     border: none;
     width: 100%;
-    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;*/
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 700;
     overflow: hidden;
@@ -2001,7 +2022,7 @@ ul.tier-two {
 }
 
 body .skill {
-    color: #8d8e8e;
+    color: #333333;
 }
 .contact_form input[type="submit"] {
     background: black !important;
@@ -2070,6 +2091,152 @@ body .skill {
 	.modal-image img {
 	    max-width: 100%;
 	}
+	img.about-logo {
+	    max-width: 250px;
+	    margin: 0 auto;
+	    display: block;
+	}
+	.ta-center {
+	    text-align: center;
+	}
+	.skill-content-about p {
+	    max-width: 960px;
+	    margin: 0 auto;
+	}
+	.skill ul {
+	    font-size: 18px;
+	    line-height: 1.75em;
+	}	
+	a.lets-chat {
+	    border: none;
+	    color: #0669a4;
+	    text-decoration: underline;
+	}
+	a.lets-chat:hover {
+		background: none;
+		border: none; 
+	    color: #333;
+	    text-decoration: none;
+	}
+	.demo-cta p {
+	    padding: 0 40px;
+	}
 
-
-
+	/*======================================
+	========================================
+		SLICK SLIDER FOR ABOUT OLM PAGE
+	========================================
+	======================================*/
+		.slick-slide {
+		    margin: 0px 20px;
+		}
+		.slick-slide img {
+		    width: 100%;
+		}
+		.slick-slider
+		{
+		    position: relative;
+		    display: block;
+		    box-sizing: border-box;
+		    -webkit-user-select: none;
+		    -moz-user-select: none;
+		    -ms-user-select: none;
+		            user-select: none;
+		    -webkit-touch-callout: none;
+		    -khtml-user-select: none;
+		    -ms-touch-action: pan-y;
+		        touch-action: pan-y;
+		    -webkit-tap-highlight-color: transparent;
+		}
+		.slick-list
+		{
+		    position: relative;
+		    display: block;
+		    overflow: hidden;
+		    margin: 0;
+		    padding: 0;
+		}
+		.slick-list:focus
+		{
+		    outline: none;
+		}
+		.slick-list.dragging
+		{
+		    cursor: pointer;
+		    cursor: hand;
+		}
+		.slick-slider .slick-track,
+		.slick-slider .slick-list
+		{
+		    -webkit-transform: translate3d(0, 0, 0);
+		       -moz-transform: translate3d(0, 0, 0);
+		        -ms-transform: translate3d(0, 0, 0);
+		         -o-transform: translate3d(0, 0, 0);
+		            transform: translate3d(0, 0, 0);
+		}
+		.slick-track
+		{
+		    position: relative;
+		    top: 0;
+		    left: 0;
+		    display: block;
+		}
+		.slick-track:before,
+		.slick-track:after
+		{
+		    display: table;
+		    content: '';
+		}
+		.slick-track:after
+		{
+		    clear: both;
+		}
+		.slick-loading .slick-track
+		{
+		    visibility: hidden;
+		}
+		.slick-slide
+		{
+		    display: none;
+		    float: left;
+		    height: 100%;
+		    min-height: 1px;
+		}
+		[dir='rtl'] .slick-slide
+		{
+		    float: right;
+		}
+		.slick-slide img
+		{
+		    display: block;
+		}
+		.slick-slide.slick-loading img
+		{
+		    display: none;
+		}
+		.slick-slide.dragging img
+		{
+		    pointer-events: none;
+		}
+		.slick-initialized .slick-slide
+		{
+		    display: block;
+		}
+		.slick-loading .slick-slide
+		{
+		    visibility: hidden;
+		}
+		.slick-vertical .slick-slide
+		{
+		    display: block;
+		    height: auto;
+		    border: 1px solid transparent;
+		}
+		.slick-arrow.slick-hidden {
+		    display: none;
+		}	
+	/*======================================
+	========================================
+		END SLICK SLIDER
+	========================================
+	======================================*/		
