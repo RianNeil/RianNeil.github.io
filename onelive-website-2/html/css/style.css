@@ -2046,11 +2046,28 @@ body .skill {
     color: white !important;
     padding: 10px 20px !important;
     margin-top: 15px !important;
+    border-color: rgba(256,256,256,0.25);
+    background: none;
+    padding: 10px 45px;
+    color: #fff;
+    text-shadow: none;
+    text-transform: uppercase;
+    border: 1px solid gray !important;
+    max-width: 200px; 
 }
+
+.contact_form input[type="submit"]:hover {
+    background: white !important;
+    color: #333 !important;
+}
+
 .contact_form input {
     width: 50% !important;
     min-width: 285px !important;
     margin-bottom: 12px !important;
+    background: black;
+    border: none;
+    border-bottom: 1px solid gray;    
 }
 
 /*==========================================
