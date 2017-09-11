@@ -211,7 +211,7 @@ jQuery(document).ready(function() {
 	/* ==============================================
     /* CODE TO DUPLICATE THE FOOTER
 	================================================== */
-	$('footer').clone().appendTo(".aboutme, .work, .blog, .contact");
+	$('footer').clone().appendTo(".aboutme, .work");
 		$('.aboutme footer').removeClass('hide').addClass('darkFooter');
 		$('.work footer').removeClass('hide').addClass('darkFooter');
 		$('.blog footer').removeClass('hide').addClass('darkFooter');
