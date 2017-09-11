@@ -1261,6 +1261,10 @@ img.brand-icons {
     width: 100%;
 }
 
+.table-column{
+    height: 760px;
+}
+
 img.page_commerce-one-logo, img.page_commerce-one-icons {
     max-width: 500px !important;
     margin: 0 auto !important;
