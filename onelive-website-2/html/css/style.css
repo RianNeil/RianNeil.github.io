@@ -2167,6 +2167,21 @@ body .skill {
 	    background: #333;
 	    color: white !important;
 	}
+    a.link-reg {
+        padding: 0;
+        border: none;
+        font-weight: bold;
+        background: none;
+        color: black;
+    }
+    a.link-reg:hover {
+        padding: 0;
+        border: none;
+        font-weight: bold;
+        opacity: .7;
+        background: none;
+        color: black;
+    }
 
 	/*======================================
 	========================================
