@@ -1447,6 +1447,7 @@ img.page_commerce-one-logo, img.page_commerce-one-icons {
 
 .blog .post .post-right{
     margin-left: 60px;
+    max-width: 90%;
 }
 
 .blog .post .post-image{
@@ -2072,6 +2073,9 @@ body .skill {
     background: black;
     border: none;
     border-bottom: 1px solid gray;    
+}
+.col-md-6.skill img {
+    max-width: 100%;
 }
 
 /*==========================================
